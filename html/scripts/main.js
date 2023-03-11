@@ -83,6 +83,25 @@ function A6Btn() {
 		document.getElementById('A62Input').setAttribute("placeholder", '错了！再来');	
 	}
 }
-function A7Btn() {
+function A71Btn() {
 	window.open("https://docs.google.com/forms/d/e/1FAIpQLSdC3XCSKdpLHPVYK7FyfqLEgzEF1oaqdvaHABCx6vic2WRG1w/viewform");
+}
+function A72Btn() {
+	if (document.getElementById('view').innerHTML == '查看全文') {
+		document.getElementById('view').innerHTML = '隐藏全文';
+		document.getElementById('P1').style.display = 'block';
+		document.getElementById('P2').style.display = 'block';
+		document.getElementById('P3').style.display = 'block';
+		document.getElementById('P4').style.display = 'block';
+		document.getElementById('P5').style.display = 'block';
+		document.getElementById('P6').style.display = 'block';
+	} else{
+		document.getElementById('view').innerHTML = '查看全文';
+		document.getElementById('P1').style.display = 'none';
+		document.getElementById('P2').style.display = 'none';
+		document.getElementById('P3').style.display = 'none';
+		document.getElementById('P4').style.display = 'none';
+		document.getElementById('P5').style.display = 'none';
+		document.getElementById('P6').style.display = 'none';
+	}
 }
