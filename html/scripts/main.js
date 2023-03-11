@@ -66,7 +66,7 @@ function A5Btn() {
 	}
 }
 function A6Btn() {
-	if(document.getElementById('A61Input').value =='まやクロ' && document.getElementById('A62Input').value =='ファンシー' && document.getElementById('A63Input').value =='ユー'){
+	if((document.getElementById('A61Input').value =='まやクロ' || document.getElementById('A61Input').value =='まやくろ' || document.getElementById('A61Input').value =='真矢クロ' || document.getElementById('A61Input').value =='真矢くろ' || document.getElementById('A61Input').value =='マヤクロ' || document.getElementById('A61Input').value =='マヤくろ'  ) && document.getElementById('A62Input').value =='ファンシー' && document.getElementById('A63Input').value =='ユー'){
 		document.getElementById('Q6Blank').innerHTML = 'まやクロのファンシー　ユー';
 		document.getElementById('P6Btn').style.display = 'none';	
 		document.getElementById('P7').style.display = 'block';
