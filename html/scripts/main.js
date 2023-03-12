@@ -3,16 +3,17 @@ function A0Btn() {
 	document.getElementById('P0').style.display = 'none';
 	document.getElementById('P1').style.display = 'block';
 	document.getElementById('P1Btn').style.display = 'block';
+	lineByline('P1line', 'P1Btn');
 }
 
 //value judgement
 function A1Btn() {
 	if(document.getElementById('A1Input').value =='まんようしゅう'){
 		document.getElementById('Q1Blank').innerHTML = 'まんようしゅう';
-		document.getElementById('A1Btn').style.display = 'none';	
-		document.getElementById('A1Input').style.display = 'none';	
+		document.getElementById('P1Btn').style.display = 'none';	
 		document.getElementById('P2').style.display = 'block';
 		document.getElementById('P2Btn').style.display = 'block';
+		lineByline('P2line', 'P2Btn');
 	}else{
 		document.getElementById('A1Input').value = '';
 		document.getElementById('A1Input').setAttribute("placeholder", '错了！再来');
@@ -24,6 +25,7 @@ function A2Btn() {
 		document.getElementById('P2Btn').style.display = 'none';	
 		document.getElementById('P3').style.display = 'block';
 		document.getElementById('P3Btn').style.display = 'block';
+		lineByline('P3line', 'P3Btn');
 	}else{
 		document.getElementById('A2Input').value="";	
 		document.getElementById('A2Input').setAttribute("placeholder", '错了！再来');	
@@ -36,6 +38,7 @@ function A3Btn() {
 		document.getElementById('P3Btn').style.display = 'none';	
 		document.getElementById('P4').style.display = 'block';
 		document.getElementById('P4Btn').style.display = 'block';
+		lineByline('P4line', 'P4Btn');
 	}else{
 		document.getElementById('A31Input').value="";	
 		document.getElementById('A32Input').value="";	
@@ -49,6 +52,7 @@ function A4Btn() {
 		document.getElementById('P4Btn').style.display = 'none';	
 		document.getElementById('P5').style.display = 'block';
 		document.getElementById('P5Btn').style.display = 'block';
+		lineByline('P5line', 'P5Btn');
 	}else{
 		document.getElementById('A4Input').value="";	
 		document.getElementById('A4Input').setAttribute("placeholder", '错了！再来');	
@@ -60,6 +64,7 @@ function A5Btn() {
 		document.getElementById('P5Btn').style.display = 'none';	
 		document.getElementById('P6').style.display = 'block';
 		document.getElementById('P6Btn').style.display = 'block';
+		lineByline('P6line', 'P6Btn');
 	}else{
 		document.getElementById('A5Input').value="";	
 		document.getElementById('A5Input').setAttribute("placeholder", '错了！再来');	
@@ -105,3 +110,12 @@ function A72Btn() {
 		document.getElementById('P6').style.display = 'none';
 	}
 }
+
+// Animate one paragraph at a time
+function lineByline(className, btnName){
+	var paragraphs = document.getElementsByClassName(className);
+	for (var i = 0; i < paragraphs.length; i++){
+		setTimeout(function(item){item.style.opacity='1'}, 1000*(i+1), paragraphs[i]);			
+	}
+	setTimeout(function(item){item.style.opacity='1'}, 1000*(i+1), document.getElementById(btnName));
+};

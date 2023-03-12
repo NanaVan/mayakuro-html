@@ -16,44 +16,12 @@ div {
   	margin: 0 auto;
   	background-color: white;
 }
-div.P1 {
+div.P1, div.P2, div.P3, div.P4, div.P5, div.P6, div.P7 {
+  	display: none;
+}
+div.P1Btn, div.P2Btn, div.P3Btn, div.P4Btn, div.P5Btn, div.P6Btn {
 	display: none;
-}
-div.P2 {
-  	display: none;
-}
-div.P3 {
-  	display: none;
-}
-div.P4 {
-  	display: none;
-}
-div.P5 {
-  	display: none;
-}
-div.P6 {
-  	display: none;
-}
-div.P7 {
-  	display: none;
-}
-div.P1Btn {
-	display: none;
-}
-div.P2Btn {
-  	display: none;
-}
-div.P3Btn {
-  	display: none;
-}
-div.P4Btn {
-  	display: none;
-}
-div.P5Btn {
-  	display: none;
-}
-div.P6Btn {
-  	display: none;
+	opacity: 0;
 }
 
 h1 {
@@ -69,6 +37,9 @@ p, li {
   	font-size: 16px;
   	line-height: 2;
   	letter-spacing: 1px;
+}
+p.P1line, p.P2line, p.P3line, p.P4line, p.P5line, p.P6line {
+	opacity: 0;
 }
 
 span.OrangeToGray{
@@ -94,6 +65,7 @@ img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	opacity: 0;
 }
 
 button {
