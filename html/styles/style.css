@@ -39,7 +39,7 @@ p, li {
   	letter-spacing: 1px;
 }
 p.P1line, p.P2line, p.P3line, p.P4line, p.P5line, p.P6line {
-	opacity: 0;
+	display: none;
 }
 
 span.OrangeToGray{
@@ -60,12 +60,11 @@ span.Orange{
 }
 
 img {
-  	display: block;
+  	display: none;
   	margin: 0 auto;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	opacity: 0;
 }
 
 button {

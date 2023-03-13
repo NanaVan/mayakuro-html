@@ -3,7 +3,7 @@ function A0Btn() {
 	document.getElementById('P0').style.display = 'none';
 	document.getElementById('P1').style.display = 'block';
 	document.getElementById('P1Btn').style.display = 'block';
-	lineByline('P1line', 'P1Btn');
+	printer('P1line', 'P1print', 'P1Btn', 'Q1Blank', 'OrangeToGray');
 }
 
 //value judgement
@@ -13,7 +13,7 @@ function A1Btn() {
 		document.getElementById('P1Btn').style.display = 'none';	
 		document.getElementById('P2').style.display = 'block';
 		document.getElementById('P2Btn').style.display = 'block';
-		lineByline('P2line', 'P2Btn');
+		printer('P2line', 'P2print', 'P2Btn', 'Q2Blank', 'OrangeToGray');
 	}else{
 		document.getElementById('A1Input').value = '';
 		document.getElementById('A1Input').setAttribute("placeholder", '错了！再来');
@@ -25,7 +25,7 @@ function A2Btn() {
 		document.getElementById('P2Btn').style.display = 'none';	
 		document.getElementById('P3').style.display = 'block';
 		document.getElementById('P3Btn').style.display = 'block';
-		lineByline('P3line', 'P3Btn');
+		printer('P3line', 'P3print', 'P3Btn', 'Q3Blank', 'OrangeToGray');
 	}else{
 		document.getElementById('A2Input').value="";	
 		document.getElementById('A2Input').setAttribute("placeholder", '错了！再来');	
@@ -33,12 +33,11 @@ function A2Btn() {
 }
 function A3Btn() {
 	if(document.getElementById('A31Input').value =='クロード' && document.getElementById('A32Input').value =='ドビュッシー' ){
-		document.getElementById('Q31Blank').innerHTML = 'クロード';
-		document.getElementById('Q32Blank').innerHTML = 'ドビュッシー';
+		document.getElementById('Q3Blank').innerHTML = 'クロード&#8226;ドビュッシー';
 		document.getElementById('P3Btn').style.display = 'none';	
 		document.getElementById('P4').style.display = 'block';
 		document.getElementById('P4Btn').style.display = 'block';
-		lineByline('P4line', 'P4Btn');
+		printer('P4line', 'P4print', 'P4Btn', 'Q4Blank', 'OrangeToGray');
 	}else{
 		document.getElementById('A31Input').value="";	
 		document.getElementById('A32Input').value="";	
@@ -52,7 +51,7 @@ function A4Btn() {
 		document.getElementById('P4Btn').style.display = 'none';	
 		document.getElementById('P5').style.display = 'block';
 		document.getElementById('P5Btn').style.display = 'block';
-		lineByline('P5line', 'P5Btn');
+		printer('P5line', 'P5print', 'P5Btn', 'Q5Blank', 'Orange');
 	}else{
 		document.getElementById('A4Input').value="";	
 		document.getElementById('A4Input').setAttribute("placeholder", '错了！再来');	
@@ -64,7 +63,7 @@ function A5Btn() {
 		document.getElementById('P5Btn').style.display = 'none';	
 		document.getElementById('P6').style.display = 'block';
 		document.getElementById('P6Btn').style.display = 'block';
-		lineByline('P6line', 'P6Btn');
+		printer('P6line', 'P6print', 'P6Btn', 'Q6Blank', 'OrangeToGrayToOrange');
 	}else{
 		document.getElementById('A5Input').value="";	
 		document.getElementById('A5Input').setAttribute("placeholder", '错了！再来');	
@@ -72,7 +71,7 @@ function A5Btn() {
 }
 function A6Btn() {
 	if((document.getElementById('A61Input').value =='まやクロ' || document.getElementById('A61Input').value =='まやくろ' || document.getElementById('A61Input').value =='真矢クロ' || document.getElementById('A61Input').value =='真矢くろ' || document.getElementById('A61Input').value =='マヤクロ' || document.getElementById('A61Input').value =='マヤくろ'  ) && document.getElementById('A62Input').value =='ファンシー' && document.getElementById('A63Input').value =='ユー'){
-		document.getElementById('Q6Blank').innerHTML = 'まやクロのファンシー　ユー';
+		document.getElementById('Q6Blank').innerHTML = '真矢クロのファンシー　ユー';
 		document.getElementById('P6Btn').style.display = 'none';	
 		document.getElementById('P7').style.display = 'block';
 		document.getElementById('P1').style.display = 'none';
@@ -115,7 +114,56 @@ function A72Btn() {
 function lineByline(className, btnName){
 	var paragraphs = document.getElementsByClassName(className);
 	for (var i = 0; i < paragraphs.length; i++){
-		setTimeout(function(item){item.style.opacity='1'}, 1000*(i+1), paragraphs[i]);			
+		setTimeout(function(item){item.style.opacity='1'}, 5000*(i+1), paragraphs[i]);			
 	}
-	setTimeout(function(item){item.style.opacity='1'}, 1000*(i+1), document.getElementById(btnName));
+	setTimeout(function(item){item.style.opacity='1'}, 5000*(i+1), document.getElementById(btnName));
 };
+
+// Animate one paragraph with word by word
+function printer(inputClassName, outputClassName, btnName, spanID, spanClass){
+	var paragraphs = document.getElementsByClassName(inputClassName);
+	var prints = document.getElementsByClassName(outputClassName);
+	var t = 0
+	for (var i = 0; i < paragraphs.length; i++){
+		var spanItem = paragraphs[i].getElementsByTagName("span");
+		if (spanItem.length != 0) {
+			t = wordByWordWith(t, paragraphs[i], prints[i], spanID, spanClass);	
+		} else if (paragraphs[i].tagName == 'IMG'){
+			setTimeout(function(item){item.style.display='block'}, 100*t, prints[i]);
+			t += 1;
+		} else {
+			t = wordByWordWithOut(t, paragraphs[i], prints[i]);
+		}
+	}
+	setTimeout(function(item){item.style.opacity='1'}, 100*(t+1), document.getElementById(btnName));
+}
+// without span
+function wordByWordWithOut(t0, para, print) {
+	const data = para.innerHTML.split('');
+	for (var i = 0; i < data.length; i++) {
+		setTimeout(function(container, word){container.innerHTML += word}, 100*(t0+i), print, data[i]);
+	}
+	return t0+i+1
+}
+// with span
+function wordByWordWith(t0, para, print, spanID, spanClass) {
+	const elements = para.childNodes;
+	var k = 0;
+	for (var i = 0; i < elements.length; i++) {
+		if (i==0 || i==2) {
+			const data = elements[i].textContent.split('');
+			for (var j = 0; j < data.length; j++) {
+				setTimeout(function(container, word){container.innerHTML += word}, 100*(t0+i+j+k), print, data[j]);
+			}
+		} else {
+			var temp = document.createElement("span");
+			var node = document.createTextNode(para.children[0].textContent);
+			temp.appendChild(node);
+			temp.setAttribute("id", spanID);
+			temp.setAttribute("class", spanClass);
+			setTimeout(function(container, word){container.appendChild(word)}, 100*(t0+i+k), print, temp);
+			j=0;
+		}
+		k += j;}
+	return t0+i+k
+}
