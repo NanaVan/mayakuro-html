@@ -110,15 +110,6 @@ function A72Btn() {
 	}
 }
 
-// Animate one paragraph at a time
-function lineByline(className, btnName){
-	var paragraphs = document.getElementsByClassName(className);
-	for (var i = 0; i < paragraphs.length; i++){
-		setTimeout(function(item){item.style.opacity='1'}, 5000*(i+1), paragraphs[i]);			
-	}
-	setTimeout(function(item){item.style.opacity='1'}, 5000*(i+1), document.getElementById(btnName));
-};
-
 // Animate one paragraph with word by word
 function printer(inputClassName, outputClassName, btnName, spanID, spanClass){
 	var paragraphs = document.getElementsByClassName(inputClassName);

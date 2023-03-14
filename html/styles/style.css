@@ -4,23 +4,38 @@ html {
   	background-color: lightgray;
 }
 
-body {
-  	width: 700px;
-  	margin: 0 auto;
-  	background-color: white;
-  	padding: 0 20px 20px 20px;
-  	border: 5px solid black;
+@media screen and (min-width: 701px) {
+/*browser width >= 701px */
+	body {
+	  	width: 700px;
+	  	margin: 10px auto;
+	  	background-color: white;
+	  	padding: 20px 20px 20px 20px;
+	  	border: 5px solid black;
+	}
+}
+@media screen and (max-width: 700px) {
+/*browser width <= 700px*/
+	body {
+	  	width: 90%;
+	  	margin: 10px auto;
+	  	background-color: white;
+	  	padding: 20px 20px 20px 20px;
+	  	border: 5px solid black;
+	}
 }
 div {
-	width: 700px;
-  	margin: 0 auto;
-  	background-color: white;
+	width: 100%;
+	margin: 0 auto;
+	background-color: transparent;
 }
 div.P1, div.P2, div.P3, div.P4, div.P5, div.P6, div.P7 {
   	display: none;
 }
 div.P1Btn, div.P2Btn, div.P3Btn, div.P4Btn, div.P5Btn, div.P6Btn {
 	display: none;
+	margin: 0px auto 0px auto;
+	text-align: right;
 	opacity: 0;
 }
 
@@ -29,7 +44,7 @@ h1 {
   	text-align: center;
   	margin: 0;
   	padding: 20px 0;
-  	color: orange;
+  	color: darkorange;
   	text-shadow: 3px 3px 1px black;
 }
 
