@@ -142,19 +142,19 @@ function printer(inputClassName, outputClassName, btnName, spanID, spanClass){
 		if (spanItem.length != 0) {
 			t = wordByWordWith(t, paragraphs[i], prints[i], spanID, spanClass);	
 		} else if (paragraphs[i].tagName == 'IMG'){
-			setTimeout(function(item){item.style.display='block'}, 120*t, prints[i]);
+			setTimeout(function(item){item.style.display='block'}, 100*t, prints[i]);
 			t += 1;
 		} else {
 			t = wordByWordWithOut(t, paragraphs[i], prints[i]);
 		}
 	}
-	setTimeout(function(item){item.style.opacity='1'}, 120*(t+1), document.getElementById(btnName));
+	setTimeout(function(item){item.style.opacity='1'}, 100*(t+1), document.getElementById(btnName));
 }
 // without span
 function wordByWordWithOut(t0, para, print) {
 	const data = para.innerHTML.split('');
 	for (var i = 0; i < data.length; i++) {
-		setTimeout(function(container, word){container.innerHTML += word}, 120*(t0+i), print, data[i]);
+		setTimeout(function(container, word){container.innerHTML += word}, 100*(t0+i), print, data[i]);
 	}
 	return t0+i+1
 }
@@ -166,7 +166,7 @@ function wordByWordWith(t0, para, print, spanID, spanClass) {
 		if (i==0 || i==2) {
 			const data = elements[i].textContent.split('');
 			for (var j = 0; j < data.length; j++) {
-				setTimeout(function(container, word){container.innerHTML += word}, 120*(t0+i+j+k), print, data[j]);
+				setTimeout(function(container, word){container.innerHTML += word}, 100*(t0+i+j+k), print, data[j]);
 			}
 		} else {
 			var temp = document.createElement("span");
@@ -174,7 +174,7 @@ function wordByWordWith(t0, para, print, spanID, spanClass) {
 			temp.appendChild(node);
 			temp.setAttribute("id", spanID);
 			temp.setAttribute("class", spanClass);
-			setTimeout(function(container, word){container.appendChild(word)}, 120*(t0+i+k), print, temp);
+			setTimeout(function(container, word){container.appendChild(word)}, 100*(t0+i+k), print, temp);
 			j=0;
 		}
 		k += j;}
