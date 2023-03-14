@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+	<html lang="ja">
+	<head>
+		<base target="_top">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<title>Leaflet map - sunshine city</title>
+	
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+	<style>
+		@media screen and (min-width: 701px) {
+			html, body {
+				height: 100%;
+				margin: 0;
+			}
+			.leaflet-container {
+				height: 400px;
+				width: 600px;
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+		@media screen and (max-width: 700px) {
+			html, body {
+				height: 100%;
+				margin: 0;
+			}
+			.leaflet-container {
+				height: 80%;
+				width: 200px;
+			}
+		}
+	</style>
+
+	
+</head>
+<body>
+
+
+
+<div id="map" style="width: 100%; height: 100%;"></div>
+<script>
+
+	const map = L.map('map').setView([35.72868731178537, 139.71950974123874], 16);
+
+		const tiles = L.tileLayer('https://tile.openstreetmap.jp/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.jp/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+
+		var polygon = L.polygon([
+				[35.729878960904244, 139.71795130168212],
+				[35.72943279965716, 139.71758808770954],
+				[35.72786098358876, 139.72038136230123],
+				[35.72891047949048, 139.7212237910206],
+				[35.72993628108338, 139.71940446364766],
+				[35.7295848627491, 139.71909440698022],
+				[35.729998023202036, 139.71833390823232],
+				[35.729789070376825, 139.71815840715547]]
+			).addTo(map);
+
+</script>
+
+
+
+</body>
+</html>
+

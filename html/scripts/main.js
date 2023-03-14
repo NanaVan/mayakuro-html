@@ -49,6 +49,7 @@ function A4Btn() {
 	if(document.getElementById('A4Input').value =='ファンシーポッズ'){
 		document.getElementById('Q4Blank').innerHTML = 'ファンシーポッズ';
 		document.getElementById('P4Btn').style.display = 'none';	
+		document.getElementById('P4hint').style.display = 'none';	
 		document.getElementById('P5').style.display = 'block';
 		document.getElementById('P5Btn').style.display = 'block';
 		printer('P5line', 'P5print', 'P5Btn', 'Q5Blank', 'Orange');
@@ -61,6 +62,7 @@ function A5Btn() {
 	if(document.getElementById('A5Input').value =='ユー'){
 		document.getElementById('Q5Blank').innerHTML = 'ユー';
 		document.getElementById('P5Btn').style.display = 'none';	
+		document.getElementById('P5hint').style.display = 'none';	
 		document.getElementById('P6').style.display = 'block';
 		document.getElementById('P6Btn').style.display = 'block';
 		printer('P6line', 'P6print', 'P6Btn', 'Q6Blank', 'OrangeToGrayToOrange');
@@ -110,6 +112,26 @@ function A72Btn() {
 	}
 }
 
+function A4hint() {
+	if (document.getElementById('P4hintSpan').innerHTML == '提示' ) {
+		document.getElementById('P4hintSpan').innerHTML = '隐藏';
+		document.getElementById('P4hint').style.display = 'block';
+	} else{
+		document.getElementById('P4hintSpan').innerHTML = '提示';
+		document.getElementById('P4hint').style.display = 'none';
+	}
+	
+}
+function A5hint() {
+	if (document.getElementById('P5hintSpan').innerHTML == '提示' ) {
+		document.getElementById('P5hintSpan').innerHTML = '隐藏';
+		document.getElementById('P5hint').style.display = 'block';
+	} else{
+		document.getElementById('P5hintSpan').innerHTML = '提示';
+		document.getElementById('P5hint').style.display = 'none';
+	}
+}
+
 // Animate one paragraph with word by word
 function printer(inputClassName, outputClassName, btnName, spanID, spanClass){
 	var paragraphs = document.getElementsByClassName(inputClassName);
@@ -120,19 +142,19 @@ function printer(inputClassName, outputClassName, btnName, spanID, spanClass){
 		if (spanItem.length != 0) {
 			t = wordByWordWith(t, paragraphs[i], prints[i], spanID, spanClass);	
 		} else if (paragraphs[i].tagName == 'IMG'){
-			setTimeout(function(item){item.style.display='block'}, 100*t, prints[i]);
+			setTimeout(function(item){item.style.display='block'}, 30*t, prints[i]);
 			t += 1;
 		} else {
 			t = wordByWordWithOut(t, paragraphs[i], prints[i]);
 		}
 	}
-	setTimeout(function(item){item.style.opacity='1'}, 100*(t+1), document.getElementById(btnName));
+	setTimeout(function(item){item.style.opacity='1'}, 30*(t+1), document.getElementById(btnName));
 }
 // without span
 function wordByWordWithOut(t0, para, print) {
 	const data = para.innerHTML.split('');
 	for (var i = 0; i < data.length; i++) {
-		setTimeout(function(container, word){container.innerHTML += word}, 100*(t0+i), print, data[i]);
+		setTimeout(function(container, word){container.innerHTML += word}, 30*(t0+i), print, data[i]);
 	}
 	return t0+i+1
 }
@@ -144,7 +166,7 @@ function wordByWordWith(t0, para, print, spanID, spanClass) {
 		if (i==0 || i==2) {
 			const data = elements[i].textContent.split('');
 			for (var j = 0; j < data.length; j++) {
-				setTimeout(function(container, word){container.innerHTML += word}, 100*(t0+i+j+k), print, data[j]);
+				setTimeout(function(container, word){container.innerHTML += word}, 30*(t0+i+j+k), print, data[j]);
 			}
 		} else {
 			var temp = document.createElement("span");
@@ -152,7 +174,7 @@ function wordByWordWith(t0, para, print, spanID, spanClass) {
 			temp.appendChild(node);
 			temp.setAttribute("id", spanID);
 			temp.setAttribute("class", spanClass);
-			setTimeout(function(container, word){container.appendChild(word)}, 100*(t0+i+k), print, temp);
+			setTimeout(function(container, word){container.appendChild(word)}, 30*(t0+i+k), print, temp);
 			j=0;
 		}
 		k += j;}

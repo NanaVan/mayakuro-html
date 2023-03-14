@@ -38,6 +38,10 @@ div.P1Btn, div.P2Btn, div.P3Btn, div.P4Btn, div.P5Btn, div.P6Btn {
 	text-align: right;
 	opacity: 0;
 }
+iframe.P4hint, iframe.P5hint {
+	display: none;
+	margin: 5px auto;
+}
 
 h1 {
   	font-size: 48px;
