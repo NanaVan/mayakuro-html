@@ -1,7 +1,12 @@
+@font-face {
+	font-family: 'Black Rose';
+	src: url('../fonts/kurobara-cinderella.ttf')
+}
+
 html {
-  	font-size: 10px;
-  	font-family: 'Zen Old Mincho', sans-serif;
-  	background-color: lightgray;
+  	font-size: 20px;
+  	font-family: 'Klee One', sans-serif;
+  	background-color: #CBC6CC;
 }
 
 @media screen and (min-width: 701px) {
@@ -29,7 +34,14 @@ div {
 	margin: 0 auto;
 	background-color: transparent;
 }
-div.P1, div.P2, div.P3, div.P4, div.P5, div.P6, div.P7 {
+div.P0{
+	font-family: 'Zen Kurenaido';
+}
+div.P1, div.P2, div.P3, div.P4, div.P5, div.P6 {
+  	display: none;
+}
+div.P7 {
+	font-family: 'Zen Kurenaido';
   	display: none;
 }
 div.P1Btn, div.P2Btn, div.P3Btn, div.P4Btn, div.P5Btn, div.P6Btn {
@@ -38,22 +50,27 @@ div.P1Btn, div.P2Btn, div.P3Btn, div.P4Btn, div.P5Btn, div.P6Btn {
 	text-align: right;
 	opacity: 0;
 }
+div.center {
+	display: table;
+	margin: 10px auto;
+	text-align: center;
+}
 iframe.P4hint, iframe.P5hint {
 	display: none;
 	margin: 5px auto;
 }
 
 h1 {
-  	font-size: 48px;
+  	font-size: 50px;
   	text-align: center;
   	margin: 0;
   	padding: 20px 0;
-  	color: darkorange;
+  	color: #FE9952;
   	text-shadow: 3px 3px 1px black;
 }
 
-p, li {
-  	font-size: 16px;
+p {
+  	font-size: 20px;
   	line-height: 2;
   	letter-spacing: 1px;
 }
@@ -61,21 +78,43 @@ p.P1line, p.P2line, p.P3line, p.P4line, p.P5line, p.P6line {
 	display: none;
 }
 
+ol {
+	list-style-type: none;
+	counter-reset: li;
+}
+li {
+  	font-size: 20px;
+	font-family: 'Zen Kurenaido';
+  	line-height: 2;
+  	letter-spacing: 1px;
+	counter-increment: li;
+}
+li::before {
+	content: counter(li);
+	color: #FE9952;
+	display: inline-block; 
+	width: 1em;
+	margin-left: -1em;
+	margin-right: 0.5em;
+	text-align: right;
+	direction: rt1;
+}
+
 span.OrangeToGray{
-	background-image: linear-gradient(to right, darkorange, lightgrey);
+	background-image: linear-gradient(to right, #FE9952, #CBC6CC);
 	-webkit-background-clip: text;
 	color: transparent;
 }
 span.OrangeToGrayToOrange{
-	background-image: linear-gradient(to left, darkorange, lightgrey, darkorange);
+	background-image: linear-gradient(to left, #FE9952, #CBC6CC, #FE9952);
 	-webkit-background-clip: text;
 	color: transparent;
 }
 span.Gray{
-	color: lightgrey;
+	color: #CBC6CC;
 }
 span.Orange{
-	color: darkorange;
+	color: #FE9952;
 }
 
 img {
@@ -87,6 +126,17 @@ img {
 }
 
 button {
-  	display: inline-block;
+  	display: inline;
+	text-align: center;
+	vertical-align: middle;
+	font-family: 'Zen Kurenaido';
+	font-size: 20px;
 }
 
+input {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	font-family: 'Zen Kurenaido';
+	font-size: 20px;
+}

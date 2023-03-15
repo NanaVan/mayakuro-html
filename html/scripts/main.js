@@ -86,6 +86,9 @@ function A6Btn() {
 		document.getElementById('Q63Blank').innerHTML = 'ファンシー　ユー';
 		document.getElementById('P6Btn').style.display = 'none';	
 		changeStyleShadow('Orange', true);
+		document.getElementById('Q61Blank').style.fontFamily = 'Black Rose';
+		document.getElementById('Q62Blank').style.fontFamily = 'Black Rose';
+		document.getElementById('Q63Blank').style.fontFamily = 'Black Rose';
 		document.getElementById('P7').style.display = 'block';
 		document.getElementById('P1').style.display = 'none';
 		document.getElementById('P2').style.display = 'none';
@@ -158,10 +161,12 @@ function changeStyleShadow(className, shadowStatus) {
 		if (shadowStatus== true) {
 			for (var i = 0; i < elements.length; i++) {
 				elements[i].style.textShadow = 'none';
+				elements[i].style.fontFamily = 'Klee One';
 			}
 		} else{
 			for (var i = 0; i < elements.length; i++) {
-				elements[i].style.textShadow = '3px 3px 1px #000, -3px -3px 1px #fff';
+				elements[i].style.textShadow = '1px 1px 1px #000, -1px -1px 1px #fff';
+				elements[i].style.fontFamily = 'Black Rose';
 			}
 		}
 }
@@ -176,19 +181,19 @@ function printer(inputClassName, outputClassName, btnName, numP){
 		if (spanItem.length != 0) {
 			t = wordByWordWith(t, paragraphs[i], prints[i], numP);	
 		} else if (paragraphs[i].tagName == 'IMG'){
-			setTimeout(function(item){item.style.display='block'}, 120*t, prints[i]);
+			setTimeout(function(item){item.style.display='block'}, 20*t, prints[i]);
 			t += 1;
 		} else {
 			t = wordByWordWithOut(t, paragraphs[i], prints[i]);
 		}
 	}
-	setTimeout(function(item){item.style.opacity='1'}, 120*(t+1), document.getElementById(btnName));
+	setTimeout(function(item){item.style.opacity='1'}, 20*(t+1), document.getElementById(btnName));
 }
 // without span
 function wordByWordWithOut(t0, para, print) {
 	const data = para.innerHTML.split('');
 	for (var i = 0; i < data.length; i++) {
-		setTimeout(function(container, word){container.innerHTML += word}, 120*(t0+i), print, data[i]);
+		setTimeout(function(container, word){container.innerHTML += word}, 20*(t0+i), print, data[i]);
 	}
 	return t0+i+1
 }
@@ -201,7 +206,7 @@ function wordByWordWith(t0, para, print, numP) {
 		if (elements[i].className == 'plain') {
 			const data = elements[i].textContent.split('');
 			for (var j = 0; j < data.length; j++) {
-				setTimeout(function(container, word){container.innerHTML += word}, 120*(t0+i+j+k), print, data[j]);
+				setTimeout(function(container, word){container.innerHTML += word}, 20*(t0+i+j+k), print, data[j]);
 			}
 		}else {
 			var temp = document.createElement("span");
@@ -209,7 +214,7 @@ function wordByWordWith(t0, para, print, numP) {
 			temp.appendChild(node);
 			temp.setAttribute("id", 'Q' + numP + spanNodeNum + 'Blank');
 			temp.setAttribute("class", elements[i].className);
-			setTimeout(function(container, word){container.appendChild(word)}, 120*(t0+i+k), print, temp);
+			setTimeout(function(container, word){container.appendChild(word)}, 20*(t0+i+k), print, temp);
 			j = 0;
 			spanNodeNum += 1;
 		}
