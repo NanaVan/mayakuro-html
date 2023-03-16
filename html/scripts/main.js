@@ -18,7 +18,7 @@ function A1Btn() {
 		printer('P2line', 'P2print', 'P2Btn', '2');
 	}else{
 		document.getElementById('A1Input').value = '';
-		document.getElementById('A1Input').setAttribute("placeholder", '错了！再来');
+		document.getElementById('A1Input').setAttribute("placeholder", '間違ってた、もう一度！');
 	}
 }
 function A2Btn() {
@@ -32,7 +32,7 @@ function A2Btn() {
 		printer('P3line', 'P3print', 'P3Btn', '3');
 	}else{
 		document.getElementById('A2Input').value="";	
-		document.getElementById('A2Input').setAttribute("placeholder", '错了！再来');	
+		document.getElementById('A2Input').setAttribute("placeholder", '間違ってた、もう一度！');	
 	}
 }
 function A3Btn() {
@@ -47,8 +47,8 @@ function A3Btn() {
 	}else{
 		document.getElementById('A31Input').value="";	
 		document.getElementById('A32Input').value="";	
-		document.getElementById('A31Input').setAttribute("placeholder", '错了！再来');	
-		document.getElementById('A32Input').setAttribute("placeholder", '错了！再来');	
+		document.getElementById('A31Input').setAttribute("placeholder", '間違ってた、もう一度！');	
+		document.getElementById('A32Input').setAttribute("placeholder", '間違ってた、もう一度！');	
 	}
 }
 function A4Btn() {
@@ -63,7 +63,7 @@ function A4Btn() {
 		printer('P5line', 'P5print', 'P5Btn', '5');
 	}else{
 		document.getElementById('A4Input').value="";	
-		document.getElementById('A4Input').setAttribute("placeholder", '错了！再来');	
+		document.getElementById('A4Input').setAttribute("placeholder", '間違ってた、もう一度！');	
 	}
 }
 function A5Btn() {
@@ -76,7 +76,7 @@ function A5Btn() {
 		printer('P6line', 'P6print', 'P6Btn', '6');
 	}else{
 		document.getElementById('A5Input').value="";	
-		document.getElementById('A5Input').setAttribute("placeholder", '错了！再来');	
+		document.getElementById('A5Input').setAttribute("placeholder", '間違ってた、もう一度！');	
 	}
 }
 function A6Btn() {
@@ -100,15 +100,15 @@ function A6Btn() {
 		document.getElementById('A61Input').value="";	
 		document.getElementById('A62Input').value="";	
 		document.getElementById('A63Input').value="";	
-		document.getElementById('A62Input').setAttribute("placeholder", '错了！再来');	
+		document.getElementById('A62Input').setAttribute("placeholder", '間違ってた、もう一度！');	
 	}
 }
 function A71Btn() {
 	window.open("https://docs.google.com/forms/d/e/1FAIpQLSdC3XCSKdpLHPVYK7FyfqLEgzEF1oaqdvaHABCx6vic2WRG1w/viewform");
 }
 function A72Btn() {
-	if (document.getElementById('view').innerHTML == '查看全文') {
-		document.getElementById('view').innerHTML = '隐藏全文';
+	if (document.getElementById('view').innerHTML == '全文表示') {
+		document.getElementById('view').innerHTML = '全文を隠す';
 		document.getElementById('P1').style.display = 'block';
 		document.getElementById('P2').style.display = 'block';
 		document.getElementById('P3').style.display = 'block';
@@ -116,7 +116,7 @@ function A72Btn() {
 		document.getElementById('P5').style.display = 'block';
 		document.getElementById('P6').style.display = 'block';
 	} else{
-		document.getElementById('view').innerHTML = '查看全文';
+		document.getElementById('view').innerHTML = '全文表示';
 		document.getElementById('P1').style.display = 'none';
 		document.getElementById('P2').style.display = 'none';
 		document.getElementById('P3').style.display = 'none';
@@ -128,30 +128,30 @@ function A72Btn() {
 
 // hint
 function A4hint() {
-	if (document.getElementById('P4hintSpan').innerHTML == '提示' ) {
-		document.getElementById('P4hintSpan').innerHTML = '隐藏';
+	if (document.getElementById('P4hintSpan').innerHTML == 'ヒント' ) {
+		document.getElementById('P4hintSpan').innerHTML = '隠す';
 		document.getElementById('P4hint').style.display = 'block';
 	} else{
-		document.getElementById('P4hintSpan').innerHTML = '提示';
+		document.getElementById('P4hintSpan').innerHTML = 'ヒント';
 		document.getElementById('P4hint').style.display = 'none';
 	}
 	
 }
 function A5hint() {
-	if (document.getElementById('P5hintSpan').innerHTML == '提示' ) {
-		document.getElementById('P5hintSpan').innerHTML = '隐藏';
+	if (document.getElementById('P5hintSpan').innerHTML == 'ヒント' ) {
+		document.getElementById('P5hintSpan').innerHTML = '隠す';
 		document.getElementById('P5hint').style.display = 'block';
 	} else{
-		document.getElementById('P5hintSpan').innerHTML = '提示';
+		document.getElementById('P5hintSpan').innerHTML = 'ヒント';
 		document.getElementById('P5hint').style.display = 'none';
 	}
 }
 function A6hint() {
-	if (document.getElementById('P6hintSpan').innerHTML == '提示' ) {
-		document.getElementById('P6hintSpan').innerHTML = '隐藏';
+	if (document.getElementById('P6hintSpan').innerHTML == 'ヒント' ) {
+		document.getElementById('P6hintSpan').innerHTML = '隠す';
 		changeStyleShadow('Orange', false);
 	} else{
-		document.getElementById('P6hintSpan').innerHTML = '提示';
+		document.getElementById('P6hintSpan').innerHTML = 'ヒント';
 		changeStyleShadow('Orange', true);
 	}
 }
