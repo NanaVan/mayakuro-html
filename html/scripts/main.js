@@ -19,6 +19,7 @@ function A1Btn() {
 	}else{
 		document.getElementById('A1Input').value = '';
 		document.getElementById('A1Input').setAttribute("placeholder", '間違ってた、もう一度！');
+		aniShake('d1');	
 	}
 }
 function A2Btn() {
@@ -33,6 +34,7 @@ function A2Btn() {
 	}else{
 		document.getElementById('A2Input').value="";	
 		document.getElementById('A2Input').setAttribute("placeholder", '間違ってた、もう一度！');	
+		aniShake('d2');	
 	}
 }
 function A3Btn() {
@@ -49,6 +51,7 @@ function A3Btn() {
 		document.getElementById('A32Input').value="";	
 		document.getElementById('A31Input').setAttribute("placeholder", '間違ってた、もう一度！');	
 		document.getElementById('A32Input').setAttribute("placeholder", '間違ってた、もう一度！');	
+		aniShake('d3');	
 	}
 }
 function A4Btn() {
@@ -64,6 +67,7 @@ function A4Btn() {
 	}else{
 		document.getElementById('A4Input').value="";	
 		document.getElementById('A4Input').setAttribute("placeholder", '間違ってた、もう一度！');	
+		aniShake('d4');	
 	}
 }
 function A5Btn() {
@@ -77,6 +81,7 @@ function A5Btn() {
 	}else{
 		document.getElementById('A5Input').value="";	
 		document.getElementById('A5Input').setAttribute("placeholder", '間違ってた、もう一度！');	
+		aniShake('d5');	
 	}
 }
 function A6Btn() {
@@ -101,6 +106,7 @@ function A6Btn() {
 		document.getElementById('A62Input').value="";	
 		document.getElementById('A63Input').value="";	
 		document.getElementById('A62Input').setAttribute("placeholder", '間違ってた、もう一度！');	
+		aniShake('d6');	
 	}
 }
 function A71Btn() {
@@ -127,6 +133,24 @@ function A72Btn() {
 }
 
 // hint
+function A1hint() {
+	if (document.getElementById('P1hintSpan').innerHTML == 'ヒント' ) {
+		document.getElementById('P1hintSpan').innerHTML = '隠す';
+		document.getElementById('P1hint').style.display = 'block';
+	} else{
+		document.getElementById('P1hintSpan').innerHTML = 'ヒント';
+		document.getElementById('P1hint').style.display = 'none';
+	}
+}
+function A2hint() {
+	if (document.getElementById('P2hintSpan').innerHTML == 'ヒント' ) {
+		document.getElementById('P2hintSpan').innerHTML = '隠す';
+		document.getElementById('P2hint').style.display = 'block';
+	} else{
+		document.getElementById('P2hintSpan').innerHTML = 'ヒント';
+		document.getElementById('P2hint').style.display = 'none';
+	}
+}
 function A4hint() {
 	if (document.getElementById('P4hintSpan').innerHTML == 'ヒント' ) {
 		document.getElementById('P4hintSpan').innerHTML = '隠す';
@@ -135,7 +159,6 @@ function A4hint() {
 		document.getElementById('P4hintSpan').innerHTML = 'ヒント';
 		document.getElementById('P4hint').style.display = 'none';
 	}
-	
 }
 function A5hint() {
 	if (document.getElementById('P5hintSpan').innerHTML == 'ヒント' ) {
@@ -220,4 +243,10 @@ function wordByWordWith(t0, para, print, numP) {
 		}
 		k += j;}
 	return t0+i+k
+}
+
+// input error animation
+function aniShake(id) {
+	document.getElementById(id).style.animation = 'shake .2s ease-in-out 0s 2';
+	setTimeout(function(item){item.style.animation = 'none'}, 500, document.getElementById(id));
 }

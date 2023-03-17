@@ -140,32 +140,36 @@
 
 		<!- Button>
 		<div id='P1Btn' class='P1Btn'>
-				<div class='center'><input type='text' id='A1Input' class='A1' required minlength='4' maxlength='20' size='22' placeholder='仮名で書いてださい'></div>
+				<div class='center'><button class='hint' onclick='A1hint()'><span id='P1hintSpan'>ヒント</span></button></div>
+				<div class='center' id='d1'><input type='text' id='A1Input' class='A1' required minlength='4' maxlength='20' size='22' placeholder='仮名で書いてださい'></div>
 				<div class='center'><button onclick='A1Btn()' class='P1' id='A1Btn'>つづき</button></div>
 		</div>
+		<iframe id='P1hint' class='P1hint' src='hints/hint-P1.html' scrolling='no' width='100%' height='100%' style='max-width: 100%; max-height: 90vh; box-sizing: border-box;'></iframe>
 		<div id='P2Btn' class='P2Btn'>
-				<div class='center'><input type='text' id='A2Input' class='A2' required minlength='4' maxlength='22' size='22' placeholder='仮名で書いてださい'></div>
+				<div class='center'><button class='hint' onclick='A2hint()'><span id='P2hintSpan'>ヒント</span></button></div>
+				<div class='center' id='d2'><input type='text' id='A2Input' class='A2' required minlength='4' maxlength='22' size='22' placeholder='仮名で書いてださい'></div>
 				<div class='center'><button onclick='A2Btn()' class='P2' id='A2Btn'>つづき</button></div>
 		</div>
+		<img id='P2hint' src="images/P2-pic.jpg" alt="boat">
 		<div id='P3Btn' class='P3Btn'>
-				<div class='center'><input type='text' id='A31Input' class='A31' required minlength='4' maxlength='10' size='8' placeholder='仮名で書いてださい'>&#8226;<input type='text' id='A32Input' class='A32' required minlength='4' maxlength='20' size='12' placeholder='仮名で書いてださい'></div>
+				<div class='center' id='d3'><input type='text' id='A31Input' class='A31' required minlength='4' maxlength='10' size='8' placeholder='仮名で書いてださい'>&#8226;<input type='text' id='A32Input' class='A32' required minlength='4' maxlength='20' size='12' placeholder='仮名で書いてださい'></div>
 				<div class='center'><button onclick='A3Btn()' class='P3' id='A3Btn'>つづき</button></div>
 		</div>
 		<div id='P4Btn' class='P4Btn'>
 				<div class='center'><button class='hint' onclick='A4hint()'><span id='P4hintSpan'>ヒント</span></button></div>
-				<div class='center'><input type='text' id='A4Input' class='A4' required minlength='2' maxlength='22' size='22' placeholder='仮名で書いてださい'></div>
+				<div class='center' id='d4'><input type='text' id='A4Input' class='A4' required minlength='2' maxlength='22' size='22' placeholder='仮名で書いてださい'></div>
 				<div class='center'><button onclick='A4Btn()' class='P4' id='A4Btn'>つづき</button></div>
 		</div>
 		<iframe id='P4hint' class='P4hint' src='maps/map-P4.html' width='100%' height='40%' style='max-width: 100%; max-height: 90vh; box-sizing: border-box;'></iframe>
 		<div id='P5Btn' class='P5Btn'>
 				<div class='center'><button class='hint' onclick='A5hint()'><span id='P5hintSpan'>ヒント</span></button></div>
-				<div class='center'><input type='text' id='A5Input' class='A5' required minlength='2' maxlength='22' size='22' placeholder='仮名で書いてださい'></div>
+				<div class='center' id='d5'><input type='text' id='A5Input' class='A5' required minlength='2' maxlength='22' size='22' placeholder='仮名で書いてださい'></div>
 				<div class='center'><button onclick='A5Btn()' class='P5' id='A5Btn'>つづき</button></div>
 		</div>
 		<iframe id='P5hint' class='P5hint' src='maps/map-P5.html' width='100%' height='40%' style='max-width: 100%; max-height: 90vh; box-sizing: border-box;'></iframe>
 		<div id='P6Btn' class='P6Btn'>
 				<div class='center'><button class='hint' onclick='A6hint()'><span id='P6hintSpan'>ヒント</span></button></div>
-				<div class='center'><input type='text' id='A61Input' class='A6' required minlength='2' maxlength='22' size='8' placeholder='仮名で書いてださい'>の<input type='text' id='A62Input' class='A6' required minlength='2' maxlength='22' size='10' placeholder='仮名で書いてださい'>&nbsp;&nbsp;<input type='text' id='A63Input' class='A6' required minlength='2' maxlength='22' size='4' placeholder='仮名で書いてださい'></div>
+				<div class='center' id='d6'><input type='text' id='A61Input' class='A6' required minlength='2' maxlength='22' size='8' placeholder='仮名で書いてださい'>の<input type='text' id='A62Input' class='A6' required minlength='2' maxlength='22' size='10' placeholder='仮名で書いてださい'>&nbsp;&nbsp;<input type='text' id='A63Input' class='A6' required minlength='2' maxlength='22' size='4' placeholder='仮名で書いてださい'></div>
 				<div class='center'><button onclick='A6Btn()' class='P6' id='A6Btn'>つづき</button></div>
 		</div>
   </body>

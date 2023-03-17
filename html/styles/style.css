@@ -55,7 +55,7 @@ div.center {
 	margin: 10px auto;
 	text-align: center;
 }
-iframe.P4hint, iframe.P5hint {
+iframe.P1hint, iframe.P4hint, iframe.P5hint {
 	display: none;
 	margin: 5px auto;
 }
@@ -139,4 +139,25 @@ input {
 	vertical-align: middle;
 	font-family: 'Zen Kurenaido';
 	font-size: 20px;
+	border: 2px solid #ccc;
+	border-radius: 2px;
 }
+input:focus {
+	outline: none;
+	border-color: #FE9952;
+	box-shadow: 0 0 10px #FE9952;
+}
+@keyframes shake{
+	0%{
+		margin-left: 0;
+	} 25%{
+		margin-left: 0.5rem;
+	} 50%{
+		margin-left: 0;
+	} 75%{
+		margin-left: -0.5rem;
+	} 100%{
+		margin-left: 0;
+	}
+}
+
