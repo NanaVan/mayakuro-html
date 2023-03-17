@@ -40,11 +40,14 @@ div.P0{
 div.P1, div.P2, div.P3, div.P4, div.P5, div.P6 {
   	display: none;
 }
+div.P12{
+	text-align: center;
+}
 div.P7 {
 	font-family: 'Zen Kurenaido';
   	display: none;
 }
-div.P1Btn, div.P2Btn, div.P3Btn, div.P4Btn, div.P5Btn, div.P6Btn {
+div.P1Btn, div.P12Btn, div.P2Btn, div.P3Btn, div.P4Btn, div.P5Btn, div.P6Btn {
 	display: none;
 	margin: 0px auto 0px auto;
 	text-align: right;
@@ -55,7 +58,7 @@ div.center {
 	margin: 10px auto;
 	text-align: center;
 }
-iframe.P1hint, iframe.P4hint, iframe.P5hint {
+iframe {
 	display: none;
 	margin: 5px auto;
 }
@@ -75,6 +78,9 @@ p {
   	letter-spacing: 1px;
 }
 p.P1line, p.P2line, p.P3line, p.P4line, p.P5line, p.P6line {
+	display: none;
+}
+p.P1hint, p.P2hint {
 	display: none;
 }
 

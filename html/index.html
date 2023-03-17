@@ -15,6 +15,7 @@
   	</head>
 
   	<body>
+		
 		<!-induction>
 		<div id='P0' class='P0'>
 				<h1>解密</h1>
@@ -27,33 +28,8 @@
 				</ol>
 				<div class='center'><button onclick='A0Btn()'>スタート</button></div>
 		</div>
-
-		<!- P1>	
-		<div id='P1' class='P1'>
-			<p class='P1line'>2019年5月、歌舞伎座の近くにある喫茶店で、真矢クロは、観劇後に話し合っていた。観たのは歌舞伎『燈台鬼』だ。</P>
-			<p class='P1line'>天堂：遣唐使が異国で奸人に害され、燈台鬼と化した。再会を望む人々や故郷に帰れない苦しみや無念さ、こんな哀しくて無力な役を、私は演じたことがない。</p>
-			<p class='P1line'>西條：もしこの役を演じるなら、まずは文学作品を読んでみるといいと思う。例えば…</p>
-			<p class='P1line'>天堂：小説とか、和歌とか？私なら山上憶良の和歌を読むかな。遣唐使を実際に経験した人の和歌には、そういう感覚があるから。</p>
-			<p class='P1line'><span class='plain'>西條：まるで『</span><span class='Orange'>&#9608;</span><span class='OrangeToGray'>&#9608;</span><span class='Gray'>&#9608;&#9608;&#9608;&#9604;&#9608;</span><span class='plain'>』の『好去好来の歌』みたいに、遣唐使になる多治比広成に、日本人の誇りや使命を語り、無事に帰国することを祈る願いを込めた歌だね。</span></p>
-			<p class='P1print'></p>
-			<p class='P1print'></p>
-			<p class='P1print'></p>
-			<p class='P1print'></p>
-			<p class='P1print'></p>
-  		</div>
+		<!--
 		
-		<!- P2>
-  		<div id='P2'  class='P2'>
-			<p class='P2line'><span class='plain'>天堂：「いざ子ども早く</span><span class='Orange'>&#9608;</span><span class='OrangeToGray'>&#9608;</span><span class='Gray'>&#9608;</span><span class='plain'>へ大伴の御津の浜松待ち恋ひぬらむ」この歌の郷愁はもっと切実ですね。</span></p>
-			<p class='P2line'>西條：あなたは山上憶良みたいな恋歌を書かない歌人が好きなんだ。</p>
-			<p class='P2line'>天堂：そうでもありませんよ。上手く書けているものなら、何でも好きです。</p>
-			<p class='P2line'>西條：本当、貪欲な女。</p>
-			<p class='P2print'></p>
-			<p class='P2print'></p>
-			<p class='P2print'></p>
-			<p class='P2print'></p>
-
-  		</div>
 
 		<!- P3>
   		<div id='P3' class='P3'>
@@ -137,20 +113,61 @@
 				<div class='center'><button onclick='A71Btn()'>Google Table</button></div>
 				<div class='center'><button onclick='A72Btn()'><span id='view'>全文表示</span></button></div>
 		</div>
+		-->
 
-		<!- Button>
+		<!- P1>
+		<iframe id='P1puzzle' class='P1puzzle' src='puzzles/puzzle-P1.html' scrolling='no' width='100%' height='220px' style='max-width: 100%; max-height: 100%;'></iframe>
 		<div id='P1Btn' class='P1Btn'>
 				<div class='center'><button class='hint' onclick='A1hint()'><span id='P1hintSpan'>ヒント</span></button></div>
 				<div class='center' id='d1'><input type='text' id='A1Input' class='A1' required minlength='4' maxlength='20' size='22' placeholder='仮名で書いてださい'></div>
 				<div class='center'><button onclick='A1Btn()' class='P1' id='A1Btn'>つづき</button></div>
 		</div>
-		<iframe id='P1hint' class='P1hint' src='hints/hint-P1.html' scrolling='no' width='100%' height='100%' style='max-width: 100%; max-height: 90vh; box-sizing: border-box;'></iframe>
+		<p class='P1hint' id='P1hint'>『<span class='Orange'>&#9608;</span><span class='OrangeToGray'>&#9608;</span><span class='Gray'>&#9608;&#9608;&#9608;&#9604;&#9608;</span>』の『好去好来の歌』は、遣唐使になる多治比広成に、日本人の誇りや使命を語り、無事に帰国することを祈る願いを込めた歌だ。</p>
+		<div id='P1' class='P1'>
+			<p class='P1line'>2019年5月、歌舞伎座の近くにある喫茶店で、真矢クロは、観劇後に話し合っていた。観たのは歌舞伎『燈台鬼』だ。</P>
+			<p class='P1line'>天堂：遣唐使が異国で奸人に害され、燈台鬼と化した。再会を望む人々や故郷に帰れない苦しみや無念さ、こんな哀しくて無力な役を、私は演じたことがない。</p>
+			<p class='P1line'>西條：もしこの役を演じるなら、まずは文学作品を読んでみるといいと思う。例えば…</p>
+			<p class='P1line'>天堂：小説とか、和歌とか？私なら山上憶良の和歌を読むかな。遣唐使を実際に経験した人の和歌には、そういう感覚があるから。</p>
+			<p class='P1line'><span class='plain'>西條：まるで『</span><span class='Orange'>ま</span><span class='OrangeToGray'>ん</span><span class='Gray'>ようしゅう</span><span class='plain'>』の『好去好来の歌』みたいに、遣唐使になる多治比広成に、日本人の誇りや使命を語り、無事に帰国することを祈る願いを込めた歌だね。</span></p>
+			<p class='P1print'></p>
+			<p class='P1print'></p>
+			<p class='P1print'></p>
+			<p class='P1print'></p>
+			<p class='P1print'></p>
+			<div id='P12' class='P12'>
+				<p class='P1line'>難しい？</p>
+				<p class='P1line'>簡単なことに挑戦してみよう！</p>
+				<p class='P1print'></p>
+				<p class='P1print'></p>
+			</div>
+			<div id='P12Btn' class='P12Btn'>
+				<div class='center'><button onclick='A12Btn()' class='P1' id='A12Btn'>つづき</button></div>
+			</div>
+  		</div>
+
+		<!- P2>
+  		<div id='P2'  class='P2'>
+			<p class='P2line'><span class='plain'>天堂：「いざ子ども早く</span><span class='Orange'>&#9608;</span><span class='OrangeToGray'>&#9608;</span><span class='Gray'>&#9608;</span><span class='plain'>へ大伴の御津の浜松待ち恋ひぬらむ」この歌の郷愁はもっと切実ですね。</span></p>
+			<p class='P2line'>西條：あなたは山上憶良みたいな恋歌を書かない歌人が好きなんだ。</p>
+			<p class='P2line'>天堂：そうでもありませんよ。上手く書けているものなら、何でも好きです。</p>
+			<p class='P2line'>西條：本当、貪欲な女。</p>
+			<p class='P2print'></p>
+			<p class='P2print'></p>
+			<p class='P2print'></p>
+			<p class='P2print'></p>
+  		</div>
 		<div id='P2Btn' class='P2Btn'>
 				<div class='center'><button class='hint' onclick='A2hint()'><span id='P2hintSpan'>ヒント</span></button></div>
 				<div class='center' id='d2'><input type='text' id='A2Input' class='A2' required minlength='4' maxlength='22' size='22' placeholder='仮名で書いてださい'></div>
 				<div class='center'><button onclick='A2Btn()' class='P2' id='A2Btn'>つづき</button></div>
 		</div>
-		<img id='P2hint' src="images/P2-pic.jpg" alt="boat">
+		<!-<img id='P2hint' src="images/P2-pic.jpg" alt="boat">
+		<p class='P2hint' id='P2hint'>「立てば芍薬座れば牡丹歩く姿は百合の花」、それは<span class='Orange'>&#9608;</span><span class='OrangeToGray'>&#9608;</span><span class='Gray'>&#9608;</span>なでしこだ。</p>
+
+
+
+
+
 		<div id='P3Btn' class='P3Btn'>
 				<div class='center' id='d3'><input type='text' id='A31Input' class='A31' required minlength='4' maxlength='10' size='8' placeholder='仮名で書いてださい'>&#8226;<input type='text' id='A32Input' class='A32' required minlength='4' maxlength='20' size='12' placeholder='仮名で書いてださい'></div>
 				<div class='center'><button onclick='A3Btn()' class='P3' id='A3Btn'>つづき</button></div>

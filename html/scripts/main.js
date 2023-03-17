@@ -1,27 +1,34 @@
 //initial
 function A0Btn() {
 	document.getElementById('P0').style.display = 'none';
-	document.getElementById('P1').style.display = 'block';
+	document.getElementById('P1puzzle').style.display = 'block';
 	document.getElementById('P1Btn').style.display = 'block';
-	printer('P1line', 'P1print', 'P1Btn', '1');
+	document.getElementById('P1Btn').style.opacity = '1';
 }
 
 //value judgement
 function A1Btn() {
 	if(document.getElementById('A1Input').value =='まんようしゅう'){
-		document.getElementById('Q11Blank').innerHTML = 'ま';
-		document.getElementById('Q12Blank').innerHTML = 'ん';
-		document.getElementById('Q13Blank').innerHTML = 'ようしゅう';
+		document.getElementById('P1puzzle').style.display = 'none';
 		document.getElementById('P1Btn').style.display = 'none';	
-		document.getElementById('P2').style.display = 'block';
-		document.getElementById('P2Btn').style.display = 'block';
-		printer('P2line', 'P2print', 'P2Btn', '2');
+		document.getElementById('P1').style.display = 'block';
+		document.getElementById('P12').style.display='block';
+		document.getElementById('P12Btn').style.display = 'block';
+		printer('P1line', 'P1print', 'P12Btn', '1');
 	}else{
 		document.getElementById('A1Input').value = '';
 		document.getElementById('A1Input').setAttribute("placeholder", '間違ってた、もう一度！');
 		aniShake('d1');	
 	}
 }
+function A12Btn() {
+	document.getElementById('P12').style.display = 'none';
+	document.getElementById('P12Btn').style.display = 'none';
+	document.getElementById('P2').style.display = 'block';
+	document.getElementById('P2Btn').style.display = 'block';
+	printer('P2line', 'P2print', 'P2Btn', '2');
+}
+
 function A2Btn() {
 	if(document.getElementById('A2Input').value =='やまと'){
 		document.getElementById('Q21Blank').innerHTML = 'や';
@@ -200,6 +207,7 @@ function printer(inputClassName, outputClassName, btnName, numP){
 	var prints = document.getElementsByClassName(outputClassName);
 	var t = 0
 	for (var i = 0; i < paragraphs.length; i++){
+		console.log(paragraphs[i]);
 		var spanItem = paragraphs[i].getElementsByTagName("span");
 		if (spanItem.length != 0) {
 			t = wordByWordWith(t, paragraphs[i], prints[i], numP);	
@@ -208,9 +216,12 @@ function printer(inputClassName, outputClassName, btnName, numP){
 			t += 1;
 		} else {
 			t = wordByWordWithOut(t, paragraphs[i], prints[i]);
+			console.log('flag');
 		}
 	}
-	setTimeout(function(item){item.style.opacity='1'}, 120*(t+1), document.getElementById(btnName));
+	if (btnName != '') {
+		setTimeout(function(item){item.style.opacity='1'}, 120*(t+1), document.getElementById(btnName));
+	}
 }
 // without span
 function wordByWordWithOut(t0, para, print) {
