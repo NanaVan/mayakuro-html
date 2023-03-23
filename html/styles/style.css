@@ -2,6 +2,10 @@
 	font-family: 'Black Rose';
 	src: url('../fonts/kurobara-cinderella.ttf')
 }
+@font-face {
+	font-family: 'Kana B';
+	src: url('../fonts/851CHIKARA-DZUYOKU_kanaB_004.ttf')
+}
 
 html {
   	font-size: 20px;
@@ -53,6 +57,9 @@ div.P1Btn, div.P12Btn, div.P2Btn, div.P3Btn, div.P4Btn, div.P5Btn, div.P6Btn {
 	text-align: right;
 	opacity: 0;
 }
+div.P2hint {
+	display: none;
+}
 div.center {
 	display: table;
 	margin: 10px auto;
@@ -64,6 +71,7 @@ iframe {
 }
 
 h1 {
+	font-family: 'Kana B';
   	font-size: 50px;
   	text-align: center;
   	margin: 0;
@@ -71,7 +79,18 @@ h1 {
   	color: #FE9952;
   	text-shadow: 3px 3px 1px black;
 }
-
+h2 {
+	font-family: 'Kana B';
+  	font-size: 30px;
+  	text-align: center;
+  	margin: 0;
+  	padding: 20px 0;
+  	color: #FE9952;
+  	text-shadow: 3px 3px 1px black;
+}
+.special {
+	font-family: 'Permanent Marker';
+}
 p {
   	font-size: 20px;
   	line-height: 2;
@@ -80,7 +99,7 @@ p {
 p.P1line, p.P2line, p.P3line, p.P4line, p.P5line, p.P6line {
 	display: none;
 }
-p.P1hint, p.P2hint {
+p.P1hint {
 	display: none;
 }
 
@@ -100,6 +119,7 @@ li::before {
 	color: #FE9952;
 	display: inline-block; 
 	width: 1em;
+  	text-shadow: 1px 1px 1px #CBC6CC;
 	margin-left: -1em;
 	margin-right: 0.5em;
 	text-align: right;
@@ -167,3 +187,16 @@ input:focus {
 	}
 }
 
+.video {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+}
+.video iframe, .video object, .video embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

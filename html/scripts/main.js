@@ -10,6 +10,7 @@ function A0Btn() {
 function A1Btn() {
 	if(document.getElementById('A1Input').value =='まんようしゅう'){
 		document.getElementById('P1puzzle').style.display = 'none';
+		document.getElementById('P1hint').style.display = 'none';
 		document.getElementById('P1Btn').style.display = 'none';	
 		document.getElementById('P1').style.display = 'block';
 		document.getElementById('P12').style.display='block';
@@ -261,3 +262,5 @@ function aniShake(id) {
 	document.getElementById(id).style.animation = 'shake .2s ease-in-out 0s 2';
 	setTimeout(function(item){item.style.animation = 'none'}, 500, document.getElementById(id));
 }
+
+
