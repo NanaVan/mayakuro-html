@@ -72,12 +72,12 @@ iframe {
 
 h1 {
 	font-family: 'Kana B';
-  	font-size: 50px;
+  	font-size: 40px;
   	text-align: center;
   	margin: 0;
   	padding: 20px 0;
   	color: #FE9952;
-  	text-shadow: 3px 3px 1px black;
+  	text-shadow: 2px 2px 1px black;
 }
 h2 {
 	font-family: 'Kana B';
@@ -86,7 +86,7 @@ h2 {
   	margin: 0;
   	padding: 20px 0;
   	color: #FE9952;
-  	text-shadow: 3px 3px 1px black;
+  	text-shadow: 2px 2px 1px black;
 }
 .special {
 	font-family: 'Permanent Marker';
@@ -115,10 +115,10 @@ li {
 	counter-increment: li;
 }
 li::before {
-	content: counter(li);
+	content: counter(li) "/5";
 	color: #FE9952;
 	display: inline-block; 
-	width: 1em;
+	width: 3em;
   	text-shadow: 1px 1px 1px #CBC6CC;
 	margin-left: -1em;
 	margin-right: 0.5em;
