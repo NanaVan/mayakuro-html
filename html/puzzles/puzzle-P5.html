@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+	<html lang="ja">
+	<head>
+		<base target="_top">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<title>Leaflet map - kabukiza</title>
+	
+		<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+	<style>
+		@media screen and (min-width: 701px) {
+			html, body {
+				height: 100%;
+				margin: 0;
+			}
+			.leaflet-container {
+				height: 400px;
+				width: 600px;
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+		@media screen and (max-width: 700px) {
+			html, body {
+				height: 100%;
+				margin: 0;
+			}
+			.leaflet-container {
+				height: 80%;
+				width: 200px;
+			}
+		}
+
+		.marker0Popup {
+			color: #FE9952;
+		}
+
+	</style>
+
+	
+</head>
+<body>
+
+
+
+<div id="map" style="width: 100%; height: 100%;"></div>
+<script>
+
+	const map = L.map('map').setView([35.66957736856061, 139.76831460799414], 16);
+
+		const tiles = L.tileLayer('https://tile.openstreetmap.jp/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.jp/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+
+	var coffeeIcon = L.icon({iconUrl:'../images/P5-cafe.png', iconSize: [50, 50]});
+	var restIcon = L.icon({iconUrl:'../images/P5-restaurant.png', iconSize: [50, 50]});
+
+
+	var marker0 = L.marker([35.66951650359834, 139.76865516546385], {icon: coffeeIcon}).addTo(map).bindPopup("<p>喫茶 <span class='marker0Popup'>you</span></p>");
+	var marker1 = L.marker([35.66933346953202, 139.7684566745622], {icon: coffeeIcon}).addTo(map).bindPopup("茜屋珈琲店");
+	var marker2 = L.marker([35.66984334990375, 139.76896631295037], {icon: coffeeIcon}).addTo(map).bindPopup("Flor de café 樹の花");
+	var marker3 = L.marker([35.66999588682793, 139.7687088225964], {icon: coffeeIcon}).addTo(map).bindPopup("ドトールコーヒーショップ 銀座４丁目店");
+	var marker4 = L.marker([35.66983029363717, 139.76798461293296], {icon: coffeeIcon}).addTo(map).bindPopup("タリーズコーヒー 歌舞伎座店");
+	var marker5 = L.marker([35.67023795910875, 139.7683438656201], {icon: coffeeIcon}).addTo(map).bindPopup("炭火焙煎珈琲凛イーストプラス");
+	var marker6 = L.marker([35.66914690203718, 139.76814977533164], {icon: restIcon}).addTo(map).bindPopup("日本料理 ほうおう");
+	var marker7 = L.marker([35.669983631932574, 139.76913686081792], {icon: restIcon}).addTo(map).bindPopup("五代目 花山うどん 銀座店");
+	var marker8 = L.marker([35.670153620133426, 139.76716272788175], {icon: restIcon}).addTo(map).bindPopup("レストラン早川");
+	var marker9 = L.marker([35.67003595047569, 139.7660200983866], {icon: restIcon}).addTo(map).bindPopup("現代里山料理 ZEN HOUSE");
+	var marker10 = L.marker([35.66813112040429, 139.76719144323388], {icon: restIcon}).addTo(map).bindPopup("銀座 うかい亭");
+	var marker11 = L.marker([35.66852454198696, 139.76795446387857], {icon: coffeeIcon}).addTo(map).bindPopup("喫茶室ルノアール 歌舞伎座前店");
+	var marker12 = L.marker([35.66868017156974, 139.7672993990266], {icon: restIcon}).addTo(map).bindPopup("呑処ひろし 銀座店");
+	var marker13 = L.marker([35.668948372913114, 139.7672451748658], {icon: restIcon}).addTo(map).bindPopup("鮨 銀座おのでら 登龍門");
+	var marker14 = L.marker([35.668789007128844, 139.76706814612086], {icon: restIcon}).addTo(map).bindPopup("gz");
+	var marker15 = L.marker([35.66893671047094, 139.76817975746638], {icon: restIcon}).addTo(map).bindPopup("炭火焼干物食堂 越後屋 八十吉");
+
+</script>
+
+
+
+</body>
+</html>
+

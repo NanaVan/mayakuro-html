@@ -57,7 +57,7 @@ div.P1Btn, div.P12Btn, div.P2Btn, div.P3Btn, div.P4Btn, div.P5Btn, div.P6Btn {
 	text-align: right;
 	opacity: 0;
 }
-div.P2hint {
+div.P2hint, div.P3hint {
 	display: none;
 }
 div.center {

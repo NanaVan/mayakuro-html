@@ -35,6 +35,7 @@ function A2Btn() {
 		document.getElementById('Q21Blank').innerHTML = 'や';
 		document.getElementById('Q22Blank').innerHTML = 'ま';
 		document.getElementById('Q23Blank').innerHTML = 'と';
+		document.getElementById('P2hint').style.display = 'none';	
 		document.getElementById('P2Btn').style.display = 'none';	
 		document.getElementById('P3').style.display = 'block';
 		document.getElementById('P3Btn').style.display = 'block';
@@ -50,6 +51,8 @@ function A3Btn() {
 		document.getElementById('Q31Blank').innerHTML = 'クロ';
 		document.getElementById('Q32Blank').innerHTML = 'ー';
 		document.getElementById('Q33Blank').innerHTML = 'ド&#8226;ドビュッシー';
+		document.getElementById('P3hint').style.display = 'none';	
+		document.getElementById('P3audio').pause();
 		document.getElementById('P3Btn').style.display = 'none';	
 		document.getElementById('P4').style.display = 'block';
 		document.getElementById('P4Btn').style.display = 'block';
@@ -68,7 +71,7 @@ function A4Btn() {
 		document.getElementById('Q42Blank').innerHTML = 'ポ';
 		document.getElementById('Q43Blank').innerHTML = 'ッズ';
 		document.getElementById('P4Btn').style.display = 'none';	
-		document.getElementById('P4hint').style.display = 'none';	
+		document.getElementById('P4hint').src = 'images/P4-pic.jpg';
 		document.getElementById('P5').style.display = 'block';
 		document.getElementById('P5Btn').style.display = 'block';
 		printer('P5line', 'P5print', 'P5Btn', '5');
@@ -159,13 +162,24 @@ function A2hint() {
 		document.getElementById('P2hint').style.display = 'none';
 	}
 }
+function A3hint() {
+	if (document.getElementById('P3hintSpan').innerHTML == 'ヒント' ) {
+		document.getElementById('P3hintSpan').innerHTML = '隠す';
+		document.getElementById('P3hint').style.display = 'block';
+	} else{
+		document.getElementById('P3hintSpan').innerHTML = 'ヒント';
+		document.getElementById('P3audio').pause();
+		document.getElementById('P3audio').currentTime = 0;
+		document.getElementById('P3hint').style.display = 'none';
+	}
+}
 function A4hint() {
 	if (document.getElementById('P4hintSpan').innerHTML == 'ヒント' ) {
 		document.getElementById('P4hintSpan').innerHTML = '隠す';
-		document.getElementById('P4hint').style.display = 'block';
+		document.getElementById('P4hint').src = 'puzzles/puzzle-P4.jpg';
 	} else{
 		document.getElementById('P4hintSpan').innerHTML = 'ヒント';
-		document.getElementById('P4hint').style.display = 'none';
+		document.getElementById('P4hint').src = 'images/P4-pic.jpg';
 	}
 }
 function A5hint() {
