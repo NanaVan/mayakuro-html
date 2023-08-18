@@ -36,6 +36,7 @@ function A2Btn() {
 		document.getElementById('Q22Blank').innerHTML = 'ま';
 		document.getElementById('Q23Blank').innerHTML = 'と';
 		document.getElementById('P2hint').style.display = 'none';	
+		document.getElementById('videoframe').contentWindow.postMessage('{"event":"command","func":"'+'pauseVideo'+ '","args":""}', '*');
 		document.getElementById('P2Btn').style.display = 'none';	
 		document.getElementById('P3').style.display = 'block';
 		document.getElementById('P3Btn').style.display = 'block';
