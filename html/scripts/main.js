@@ -268,7 +268,7 @@ function wordByWordWith(t0, para, print, numP) {
 			}
 			//console.log(temp);
 			setTimeout(function(container, word){container.appendChild(word)}, 120*(t0+i+k), print, temp);
-			j = 0;
+			j = 1;
 		}else {
 			var temp = document.createElement("span");
 			var node = document.createTextNode(elements[i].textContent);
