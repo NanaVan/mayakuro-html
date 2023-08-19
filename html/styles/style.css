@@ -200,3 +200,29 @@ input:focus {
 	width: 100%;
 	height: 100%;
 }
+
+ruby > rt {
+	font-size: 100%;
+	zoom: 0.5;
+}
+/*Firefox--CSS*/
+@-moz-document url-prefix(){
+  ruby > rt {
+    font-size: 50%;
+  }
+}
+/* IE11--CSS　*/
+_:-ms-fullscreen, :root ruby > rt {
+  font-size: 50%;
+}
+/* Safari--CSS　*/
+_::-webkit-full-page-media, _:future, :root ruby > rt {
+  zoom: 1;
+  font-size: -webkit-ruby-text;
+}
+/* Edge(Chromium)--CSS　*/
+_:lang(x)::-ms-, ruby > rt {
+  font-size: 100%;
+  zoom: 0.5;
+}
+

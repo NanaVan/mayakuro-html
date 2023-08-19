@@ -223,7 +223,7 @@ function printer(inputClassName, outputClassName, btnName, numP){
 	var prints = document.getElementsByClassName(outputClassName);
 	var t = 0
 	for (var i = 0; i < paragraphs.length; i++){
-		console.log(paragraphs[i]);
+		//console.log(paragraphs[i]);
 		var spanItem = paragraphs[i].getElementsByTagName("span");
 		if (spanItem.length != 0) {
 			t = wordByWordWith(t, paragraphs[i], prints[i], numP);	
@@ -232,7 +232,7 @@ function printer(inputClassName, outputClassName, btnName, numP){
 			t += 1;
 		} else {
 			t = wordByWordWithOut(t, paragraphs[i], prints[i]);
-			console.log('flag');
+			//console.log('flag');
 		}
 	}
 	if (btnName != '') {
@@ -258,6 +258,17 @@ function wordByWordWith(t0, para, print, numP) {
 			for (var j = 0; j < data.length; j++) {
 				setTimeout(function(container, word){container.innerHTML += word}, 120*(t0+i+j+k), print, data[j]);
 			}
+		}else if (elements[i].tagName == 'RUBY'){
+			var temp = document.createElement("ruby");
+			var rubyElement = elements[i].children;
+			for (var rubyElementIndex=0; rubyElementIndex < rubyElement.length; rubyElementIndex++) {
+				//console.log(rubyElement[rubyElementIndex]);
+				var clone = rubyElement[rubyElementIndex].cloneNode(true);
+				temp.appendChild(clone);
+			}
+			//console.log(temp);
+			setTimeout(function(container, word){container.appendChild(word)}, 120*(t0+i+k), print, temp);
+			j = 0;
 		}else {
 			var temp = document.createElement("span");
 			var node = document.createTextNode(elements[i].textContent);
