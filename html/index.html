@@ -37,7 +37,7 @@
 		<iframe id='P1puzzle' class='P1puzzle' src='puzzles/puzzle-P1.html' scrolling='no' width='100%' height='220px' style='max-width: 100%; max-height: 100%;'></iframe>
 		<div id='P1Btn' class='P1Btn'>
 				<div class='center'><button class='hint' onclick='A1hint()'><span id='P1hintSpan'>ヒント</span></button></div>
-				<div class='center' id='d1'><input type='text' id='A1Input' class='A1' required minlength='4' maxlength='20' size='22' placeholder='ひらがなで書いてださい'></div>
+				<div class='center' id='d1'><input type='text' id='A1Input' class='A1' required minlength='4' maxlength='20' size='24' placeholder='ひらがなで書いてださい'></div>
 				<div class='center'><button onclick='A1Btn()' class='P1' id='A1Btn'>次へ</button></div>
 		</div>
 		<p class='P1hint' id='P1hint'>『<span style='border: 1px solid #FE9952'>　</span><span style='border: 1px solid #FE9952'>　</span><span style='border: 1px solid #FE9952'>　</span>』（<span class='Orange'>&#9608;</span><span class='OrangeToGray'>&#9608;</span><span class='Gray'>&#9608;&#9608;&#9608;&#9604;&#9608;</span>）は、奈良時代末期に成立したとみられる日本に現存する最古の和歌集である。</p>
@@ -76,7 +76,7 @@
   		</div>
 		<div id='P2Btn' class='P2Btn'>
 				<div class='center'><button class='hint' onclick='A2hint()'><span id='P2hintSpan'>ヒント</span></button></div>
-				<div class='center' id='d2'><input type='text' id='A2Input' class='A2' required minlength='4' maxlength='22' size='22' placeholder='ひらがなで書いてださい'></div>
+				<div class='center' id='d2'><input type='text' id='A2Input' class='A2' required minlength='4' maxlength='22' size='24' placeholder='ひらがなで書いてださい'></div>
 				<div class='center'><button onclick='A2Btn()' class='P2' id='A2Btn'>次へ</button></div>
 		</div>
 		<div class='P2hint' id='P2hint'>
@@ -90,7 +90,7 @@
   			<p class='P3line'>西條：もちろん景色や感情を書く者ですわ。</p>
 			<p class='P3line'><span class='plain'>天堂：</span><ruby><span>高</span><rp>（</rp><rt>たけ</rt><rp>）</rp></ruby><ruby><span>市</span><rp>（</rp><rt>ちの</rt><rp>）</rp></ruby><ruby><span>黒</span><rp>（</rp><rt>くろ</rt><rp>）</rp></ruby><ruby><span>人</span><rp>（</rp><rt>ひと</rt><rp>）</rp></ruby><span class='plain'>は苦しい旅の中で繊細な恋歌を詠む。</span><ruby><span>大</span><rp>（</rp><rt>おお</rt><rp>）</rp></ruby><ruby><span>友</span><rp>（</rp><rt>ともの</rt><rp>）</rp></ruby><ruby><span>黒</span><rp>（</rp><rt>くろ</rt><rp>）</rp></ruby><ruby><span>主</span><rp>（</rp><rt>ぬし</rt><rp>）</rp></ruby><span class='plain'>は華麗な言葉で宮廷遊びの美景を書く。西條さんはどちらがお好みですか？</span></p>
   			<p class='P3line'>西條：どうしてこの二人の中から選ばなければならないの？「黒」にこだわりがありますね。あんたは。</p>
-			<p class='P3line'><span class='plain'> 天堂：私も西條さんと同じく、</span><span class='Orange'>&#9608;&#9608;</span><span class='OrangeToGray'>&#9608;</span><span class='Gray'>&#9608;&#8226;&#9608;&#9608;&#9604;&#9604;&#9608;&#9608;</span><span class='plain'>の『海』や『版画』が好きだからでしょうか。</span></p>
+			<p class='P3line'><span class='plain'> 天堂：私も西條さんと同じく、</span><span class='Orange'>&#9608;&#9608;</span><span class='OrangeToGray'>&#9608;</span><span class='Gray'>&#9608;&ensp;&#8226;&ensp;&#9608;&#9608;&#9604;&#9604;&#9608;&#9608;</span><span class='plain'>の『海』や『版画』が好きだからでしょうか。</span></p>
   			<p class='P3line'>西條：まやかしの仮面を剥がした方が可愛いよ。<p>
   			<p class='P3line'>天堂：黒の仮面でしたら、付けてもよいではないでしょうか。</p>
 			<p class='P3print'></p>
@@ -103,7 +103,7 @@
   		</div>
 		<div id='P3Btn' class='P3Btn'>
 				<div class='center'><button class='hint' onclick='A3hint()'><span id='P3hintSpan'>ヒント</span></button></div>
-				<div class='center' id='d3'><input type='text' id='A31Input' class='A31' required minlength='4' maxlength='10' size='8' placeholder='カタカナで書いてださい'>&#8226;<input type='text' id='A32Input' class='A32' required minlength='4' maxlength='20' size='12' placeholder='カタカナで書いてださい'></div>
+				<div class='center' id='d3'><input type='text' id='A31Input' class='A31' required minlength='4' maxlength='10' size='8' placeholder='カタカナ'>&ensp;&#8226;&ensp;<input type='text' id='A32Input' class='A32' required minlength='4' maxlength='20' size='16' placeholder='で書いてださい'></div>
 				<div class='center'><button onclick='A3Btn()' class='P3' id='A3Btn'>次へ</button></div>
 		</div>
 		<div class='P3hint' id='P3hint'>
@@ -112,6 +112,7 @@
 
 		<!- P4>
   		<div id='P4' class='P4'>
+			<hr class='hr-fade-content' data-content='📨'>
 			<p class='P4line'>スマホからメッセージの通知が来た。</p>
 			<p class='P4line'>西條：双葉だ。香子が見つからないって。</p>
 			<p class='P4line'>天堂：花柳さんが迷子に...？</p>
@@ -120,6 +121,8 @@
 			<p class='P4line'>天堂：西條さんに助けを求めること、知っていたよね、花柳さんが。</p>
 			<p class='P4line'>西條：今日はサンシャインシティで買い物をするってことは......</p>
 			<p class='P4line'><span class='plain'>天堂：どうやらそちらの</span><span class='Orange'>&#9608;&#9604;&#9608;&#9608;&#9608;</span><span class='OrangeToGray'>&#9608;</span><span class='Gray'>&#9604;&#9608;</span><span class='plain'>にいますね。</span></p>
+			<p class='P4line'>西條：そうね。双葉に、送信。これでいいかな。</p>
+			<p class='P4line'>天堂：いいと思います。</p>
 			<p class='P4print'></p>
 			<p class='P4print'></p>
 			<p class='P4print'></p>
@@ -128,15 +131,18 @@
 			<p class='P4print'></p>
 			<p class='P4print'></p>
 			<p class='P4print'></p>
+			<p class='P4print'></p>
+			<p class='P4print'></p>
 		</div>
 		<div id='P4Btn' class='P4Btn'>
 				<div class='center'><button class='hint' onclick='A4hint()'><span id='P4hintSpan'>ヒント</span></button></div>
-				<div class='center' id='d4'><input type='text' id='A4Input' class='A4' required minlength='2' maxlength='22' size='22' placeholder='カタカナで書いてださい'></div>
+				<div class='center' id='d4'><input type='text' id='A4Input' class='A4' required minlength='2' maxlength='22' size='24' placeholder='カタカナで書いてださい'></div>
 				<div class='center'><button onclick='A4Btn()' class='P4' id='A4Btn'>次へ</button></div>
 		</div>
 		
 		<!- P5>
 		<div id='P5' class='P5'>
+			<hr class='hr-fade-content' data-content='🍛'>
 			<p class='P5line'>天堂/西條：ごちそうさまでした。</p>
 			<p class='P5line'>西條：テイクアウトできるメニューはあるかな？</p>
 			<p class='P5line'><span class='plain'>天堂：</span><span class='Orange'>&#9608;&#9608;</span><span class='plain'>のサンドイッチ、評判が良いです。持ち帰りはできると思います。</span></p>
@@ -154,13 +160,14 @@
 		</div>
 		<div id='P5Btn' class='P5Btn'>
 				<div class='center'><button class='hint' onclick='A5hint()'><span id='P5hintSpan'>ヒント</span></button></div>
-				<div class='center' id='d5'><input type='text' id='A5Input' class='A5' required minlength='2' maxlength='22' size='22' placeholder='カタカナで書いてださい'></div>
+				<div class='center' id='d5'><input type='text' id='A5Input' class='A5' required minlength='2' maxlength='22' size='24' placeholder='カタカナで書いてださい'></div>
 				<div class='center'><button onclick='A5Btn()' class='P5' id='A5Btn'>次へ</button></div>
 		</div>
 		<iframe id='P5hint' class='P5hint' src='puzzles/puzzle-P5.html' width='100%' height='40%' style='max-width: 100%; max-height: 90vh; box-sizing: border-box;'></iframe>
 
 		<!- P6>
 		<div id='P6' class='P6'>
+			<hr class='hr-fade-content' data-content='🗼'>
 			<p class='P6line'>帰り道。二人は東京タワーが見える道を歩んでいる。</p>
 			<p class='P6line'>西條：ここからも見えるね。東京タワー。</p>
 			<p class='P6line'>天堂：そうですね。前回来たのは桜が咲いていた時期です。時間が過ぎるのは早いですね。</p>
@@ -169,7 +176,7 @@
 			<p class='P6line'>西條：もちろん、世界の一番の女優になるんだ。</p>
 			<p class='P6line'>天堂：東京タワーに向かって誓えます？</p>
 			<p class='P6line'>西條：誓いならエッフェル塔でしょう？</p>
-			<p class='P6line'><span class='plain'>天堂は微笑んで、輝いている西條の瞳を見つめていた。耳には馴染み深いメロディーが響いていた。それは彼女たち二人だけの曲、それは</span><span class='Orange'>&#9608;&#9608;&#9608;&#9608;</span><span class='OrangeToGrayToOrange'>の</span><span class='Orange'>&#9608;&#9604;&#9608;&#9608;&#9608;&nbsp;&nbsp;&#9608;&#9608;</span><span class='plain'>。</span></p>
+			<p class='P6line'><span class='plain'>天堂は微笑んで、輝いている西條の瞳を見つめていた。耳には馴染み深いメロディーが響いていた。それは彼女たち二人だけの曲、それは</span><span class='Orange'>&#9608;&#9608;&#9608;&#9608;</span><span class='OrangeToGrayToOrange'>&ensp;の&ensp;</span><span class='Orange'>&#9608;&#9604;&#9608;&#9608;&#9608;&nbsp;&nbsp;&#9608;&#9608;</span><span class='plain'>。</span></p>
 			<p class='P6print'></p>
 			<p class='P6print'></p>
 			<p class='P6print'></p>
@@ -182,14 +189,15 @@
 		</div>
 		<div id='P6Btn' class='P6Btn'>
 				<div class='center'><button class='hint' onclick='A6hint()'><span id='P6hintSpan'>ヒント</span></button></div>
-				<div class='center' id='d6'><input type='text' id='A61Input' class='A6' required minlength='2' maxlength='22' size='8' placeholder='かなで書いてださい'>の<input type='text' id='A62Input' class='A6' required minlength='2' maxlength='22' size='10' placeholder='カタカナで書いてださい'>&nbsp;&nbsp;<input type='text' id='A63Input' class='A6' required minlength='2' maxlength='22' size='4' placeholder='カタカナで書いてださい'></div>
+				<div class='center' id='d6'><input type='text' id='A61Input' class='A6' required minlength='2' maxlength='22' size='8' placeholder='漢字カナ'>&ensp;の&ensp;<input type='text' id='A62Input' class='A6' required minlength='2' maxlength='22' size='14' placeholder='回答を書いて'>&nbsp;&nbsp;<input type='text' id='A63Input' class='A6' required minlength='2' maxlength='22' size='8' placeholder='ください'></div>
 				<div class='center'><button onclick='A6Btn()' class='P6' id='A6Btn'>次へ</button></div>
 		</div>
 
 		<!- P7>
 		<div id='P7' class='P7'>
-				<h1>新婚快楽！</h1>
-				<div class='center'><button onclick='A71Btn()'>Google Table</button></div>
+				<hr class='hr-fade-content' data-content='🐣❤️ 🐒&nbsp;&nbsp;🎊&nbsp;&nbsp;🇫🇷❤️🦢'>
+				<h1>おめでとうございます！</h1>
+				<div class='center'><button onclick='A71Btn()'>プレゼント受け取り</button></div>
 				<div class='center'><button onclick='A72Btn()'><span id='view'>全文表示</span></button></div>
 		</div>
 

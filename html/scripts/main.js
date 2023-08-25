@@ -61,8 +61,8 @@ function A3Btn() {
 	}else{
 		document.getElementById('A31Input').value="";	
 		document.getElementById('A32Input').value="";	
-		document.getElementById('A31Input').setAttribute("placeholder", '間違ってた、もう一度！');	
-		document.getElementById('A32Input').setAttribute("placeholder", '間違ってた、もう一度！');	
+		document.getElementById('A31Input').setAttribute("placeholder", '間違って');	
+		document.getElementById('A32Input').setAttribute("placeholder", 'た、もう一度！');	
 		aniShake('d3');	
 	}
 }
@@ -117,7 +117,8 @@ function A6Btn() {
 		document.getElementById('A61Input').value="";	
 		document.getElementById('A62Input').value="";	
 		document.getElementById('A63Input').value="";	
-		document.getElementById('A62Input').setAttribute("placeholder", '間違ってた、もう一度！');	
+		document.getElementById('A61Input').setAttribute("placeholder", '間違って');	
+		document.getElementById('A62Input').setAttribute("placeholder", 'た、もう一度！');	
 		aniShake('d6');	
 	}
 }
