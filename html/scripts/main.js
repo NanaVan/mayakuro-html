@@ -72,6 +72,7 @@ function A4Btn() {
 		document.getElementById('Q42Blank').innerHTML = 'ポ';
 		document.getElementById('Q43Blank').innerHTML = 'ッズ';
 		document.getElementById('P4Btn').style.display = 'none';	
+		document.getElementById('P4hintP').style.display = 'none';
 		document.getElementById('P4hint').src = 'images/P4-pic.jpg';
 		document.getElementById('P5').style.display = 'block';
 		document.getElementById('P5Btn').style.display = 'block';
@@ -181,9 +182,11 @@ function A4hint() {
 	if (document.getElementById('P4hintSpan').innerHTML == 'ヒント' ) {
 		document.getElementById('P4hintSpan').innerHTML = '隠す';
 		document.getElementById('P4hint').src = 'puzzles/puzzle-P4.jpg';
+		document.getElementById('P4hintP').style.display = 'block';
 	} else{
 		document.getElementById('P4hintSpan').innerHTML = 'ヒント';
 		document.getElementById('P4hint').src = 'images/P4-pic.jpg';
+		document.getElementById('P4hintP').style.display = 'none';
 	}
 }
 function A5hint() {

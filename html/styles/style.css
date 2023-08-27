@@ -127,7 +127,7 @@ p {
 p.P1line, p.P2line, p.P3line, p.P4line, p.P5line, p.P6line {
 	display: none;
 }
-p.P1hint, p.P6hint {
+p.P1hint, p.P4hint, p.P6hint {
 	display: none;
 }
 
