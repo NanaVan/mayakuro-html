@@ -18,7 +18,7 @@ function A1Btn() {
 		printer('P1line', 'P1print', 'P12Btn', '1');
 	}else{
 		document.getElementById('A1Input').value = '';
-		document.getElementById('A1Input').setAttribute("placeholder", '間違ってた、もう一度！');
+		document.getElementById('A1Input').setAttribute("placeholder", 'ブブー！間違えた！');
 		aniShake('d1');	
 	}
 }
@@ -43,7 +43,7 @@ function A2Btn() {
 		printer('P3line', 'P3print', 'P3Btn', '3');
 	}else{
 		document.getElementById('A2Input').value="";	
-		document.getElementById('A2Input').setAttribute("placeholder", '間違ってた、もう一度！');	
+		document.getElementById('A2Input').setAttribute("placeholder", 'ブブー！間違えた！');	
 		aniShake('d2');	
 	}
 }
@@ -61,8 +61,8 @@ function A3Btn() {
 	}else{
 		document.getElementById('A31Input').value="";	
 		document.getElementById('A32Input').value="";	
-		document.getElementById('A31Input').setAttribute("placeholder", '間違って');	
-		document.getElementById('A32Input').setAttribute("placeholder", 'た、もう一度！');	
+		document.getElementById('A31Input').setAttribute("placeholder", 'ブブー！');	
+		document.getElementById('A32Input').setAttribute("placeholder", '間違えた！');	
 		aniShake('d3');	
 	}
 }
@@ -78,7 +78,7 @@ function A4Btn() {
 		printer('P5line', 'P5print', 'P5Btn', '5');
 	}else{
 		document.getElementById('A4Input').value="";	
-		document.getElementById('A4Input').setAttribute("placeholder", '間違ってた、もう一度！');	
+		document.getElementById('A4Input').setAttribute("placeholder", 'ブブー！間違えた！');	
 		aniShake('d4');	
 	}
 }
@@ -92,7 +92,7 @@ function A5Btn() {
 		printer('P6line', 'P6print', 'P6Btn', '6');
 	}else{
 		document.getElementById('A5Input').value="";	
-		document.getElementById('A5Input').setAttribute("placeholder", '間違ってた、もう一度！');	
+		document.getElementById('A5Input').setAttribute("placeholder", 'ブブー！間違えた！');	
 		aniShake('d5');	
 	}
 }
@@ -102,6 +102,7 @@ function A6Btn() {
 		document.getElementById('Q62Blank').innerHTML = 'の';
 		document.getElementById('Q63Blank').innerHTML = 'ファンシー　ユー';
 		document.getElementById('P6Btn').style.display = 'none';	
+		document.getElementById('P6hint').style.display = 'none';	
 		changeStyleShadow('Orange', true);
 		document.getElementById('Q61Blank').style.fontFamily = 'Black Rose';
 		document.getElementById('Q62Blank').style.fontFamily = 'Black Rose';
@@ -117,8 +118,9 @@ function A6Btn() {
 		document.getElementById('A61Input').value="";	
 		document.getElementById('A62Input').value="";	
 		document.getElementById('A63Input').value="";	
-		document.getElementById('A61Input').setAttribute("placeholder", '間違って');	
-		document.getElementById('A62Input').setAttribute("placeholder", 'た、もう一度！');	
+		document.getElementById('A61Input').setAttribute("placeholder", '↑前');	
+		document.getElementById('A62Input').setAttribute("placeholder", '全文を確認');	
+		document.getElementById('A63Input').setAttribute("placeholder", 'して');	
 		aniShake('d6');	
 	}
 }
@@ -197,9 +199,11 @@ function A6hint() {
 	if (document.getElementById('P6hintSpan').innerHTML == 'ヒント' ) {
 		document.getElementById('P6hintSpan').innerHTML = '隠す';
 		changeStyleShadow('Orange', false);
+		document.getElementById('P6hint').style.display = 'block';
 	} else{
 		document.getElementById('P6hintSpan').innerHTML = 'ヒント';
 		changeStyleShadow('Orange', true);
+		document.getElementById('P6hint').style.display = 'none';
 	}
 }
 
