@@ -10,7 +10,9 @@
 html {
   	font-size: 20px;
   	font-family: 'Klee One', sans-serif;
-  	background-color: #CBC6CC;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+  	/*background-color: #CBC6CC;*/
 }
 
 @media screen and (min-width: 701px) {
@@ -22,6 +24,11 @@ html {
 	  	padding: 20px 20px 20px 20px;
 	  	border: 5px solid black;
 	}
+	html {
+		background-image: url(../images/pattern_jigsaw_pc.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 }
 @media screen and (max-width: 700px) {
 /*browser width <= 700px*/
@@ -31,6 +38,11 @@ html {
 	  	background-color: white;
 	  	padding: 20px 20px 20px 20px;
 	  	border: 5px solid black;
+	}
+	html {
+		background-image: url(../images/pattern_jigsaw_phone.png);
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 }
 div {
@@ -253,4 +265,5 @@ _:lang(x)::-ms-, ruby > rt {
   font-size: 100%;
   zoom: 0.5;
 }
+
 
