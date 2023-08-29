@@ -23,7 +23,7 @@
 			text-align: center;
 			font-family: 'DotGothic16';
 			font-weight: bold;
-			background-color: rgba(0,147,59, 0.6)
+			background-color: rgba(0,147,59, 0.8)
 		}
 		div {
 			margin: 4px auto;
