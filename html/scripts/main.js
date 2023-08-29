@@ -34,6 +34,7 @@ function A2Btn() {
 	if(document.getElementById('A2Input').value =='やまと'){
 		document.getElementById('Q21Blank').innerHTML = 'や';
 		document.getElementById('Q22Blank').innerHTML = 'ま';
+		document.getElementById('Q22Blank').setAttribute('text', 'ま');
 		document.getElementById('Q23Blank').innerHTML = 'と';
 		document.getElementById('P2hint').style.display = 'none';	
 		document.getElementById('videoframe').contentWindow.postMessage('{"event":"command","func":"'+'pauseVideo'+ '","args":""}', '*');
@@ -51,6 +52,7 @@ function A3Btn() {
 	if(document.getElementById('A31Input').value =='クロード' && document.getElementById('A32Input').value =='ドビュッシー' ){
 		document.getElementById('Q31Blank').innerHTML = 'クロ';
 		document.getElementById('Q32Blank').innerHTML = 'ー';
+		document.getElementById('Q32Blank').setAttribute('text', 'ー');
 		document.getElementById('Q33Blank').innerHTML = 'ド&#8226;ドビュッシー';
 		document.getElementById('P3hint').style.display = 'none';	
 		document.getElementById('P3audio').pause();
@@ -70,6 +72,7 @@ function A4Btn() {
 	if(document.getElementById('A4Input').value =='ファンシーポッズ'){
 		document.getElementById('Q41Blank').innerHTML = 'ファンシー';
 		document.getElementById('Q42Blank').innerHTML = 'ポ';
+		document.getElementById('Q42Blank').setAttribute('text', 'ポ');
 		document.getElementById('Q43Blank').innerHTML = 'ッズ';
 		document.getElementById('P4Btn').style.display = 'none';	
 		document.getElementById('P4hintP').style.display = 'none';
@@ -115,6 +118,8 @@ function A6Btn() {
 		document.getElementById('P4').style.display = 'none';
 		document.getElementById('P5').style.display = 'none';
 		document.getElementById('P6').style.display = 'none';
+		document.body.style.backgroundColor = "rgba(0,0,0, 0.3)";
+		document.body.style.color= 'white';
 	}else{
 		document.getElementById('A61Input').value="";	
 		document.getElementById('A62Input').value="";	
@@ -283,6 +288,9 @@ function wordByWordWith(t0, para, print, numP) {
 			temp.appendChild(node);
 			temp.setAttribute("id", 'Q' + numP + spanNodeNum + 'Blank');
 			temp.setAttribute("class", elements[i].className);
+			if (elements[i].className == 'OrangeToGray') {
+				temp.setAttribute("text", elements[i].textContent);
+			}
 			setTimeout(function(container, word){container.appendChild(word)}, 120*(t0+i+k), print, temp);
 			j = 0;
 			spanNodeNum += 1;

@@ -4,7 +4,7 @@
 		<base target="_top">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<link href="https://fonts.googleapis.com/css?family=Zen+Kurenaido" rel="stylesheet">
+    	<link href="https://fonts.googleapis.com/css?family=DotGothic16" rel="stylesheet">
 	
 		<title>Hint - Book</title>
 	
@@ -20,33 +20,44 @@
 			height: 100%;
 			margin: 10px auto;
 			text-align: center;
-			font-family: 'Zen Kurenaido';
+			font-family: 'DotGothic16';
+			background-color: rgba(255,255,255, 0.8)
 		}
 		div {
 			margin: 4px auto;
+			text-shadow: 0 0 1px black;
 		}
+	
 		.pronunce {
-			font-size: 12px;
+			font-size: 16px;
 			color: #CBC6CC;
 		}
 		.pronunce span {
 			padding: 0 1px;
 			text-align: center;
-			border: 1px solid #CBC6CC;
+			border: 2px solid #CBC6CC;
 		}
 		.character {
-			font-size: 20px;
+			font-size: 26px;
 			color: #FE9952;
 		}
 		.character span{
-			border: 1px solid #FE9952;
+			border: 2px solid #FE9952;
 		}
 
 		span.OrangeToGray{
 			font-family: 'Black Rose';
 			background-image: linear-gradient(to right, #FE9952, #CBC6CC);
 			-webkit-background-clip: text;
-			color: transparent;
+			-webkit-text-fill-color: transparent;
+			text-shadow: none;
+		}
+		span.OrangeToGray::Before{
+			font-family: 'Black Rose';
+			content: attr(text);
+			position: absolute;
+			text-shadow: 0 0 2px black;
+			z-index: -1;
 		}
 		span.Gray{
 			font-family: 'Black Rose';
@@ -61,13 +72,16 @@
 </head>
 
 <body>
-		<div class='pronunce'><span>ま</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>か</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>ろ</span><span>ん</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>び</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>す</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>こ</span></div>
+		<div class='pronunce'><span>ま</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>か</span>&nbsp;&nbsp;&nbsp;<span>ろ</span><span>ん</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>び</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>す</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>こ</span></div>
 		<div class='character'><span>魔</span>　<span>嘩</span>　<span>乱</span>　　<span>微</span>　<span>好</span>　<span>恋</span></div>
-		<div class='pronunce'><span>1</span><span>2</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>3</span><span>4</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>5</span><span>6</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>7</span></div>
+		<div><br></div>
+		<div class='pronunce'><span>1</span><span>2</span>&nbsp;&nbsp;&nbsp;<span>3</span><span>4</span>&nbsp;&nbsp;&nbsp;&ensp;<span>5</span><span>6</span>&ensp;&nbsp;&nbsp;&nbsp;<span>7</span></div>
 		<div class='character'><span>圧</span>　<span>卍</span>　<span>播</span>　<span>磨</span></div>
-		<div class='pronunce'><span>3</span><span>4</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>5</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>1</span><span>2</span><span>7</span><span>6</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8800;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='Orange'>&#9608;</span><span class='OrangeToGray'>&#9608;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class='Gray'>&#9608;</span><span class='Gray'>&#9608;</span>&nbsp;&nbsp;&nbsp;<span class='Gray'>&#9608;</span><span class='Gray'>&#9604;</span><span class='Gray'>&#9608;</span></div>
+		<div><br></div>
+		<div class='pronunce'><span>3</span><span>4</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>5</span>&nbsp;&nbsp;&nbsp;<span>1</span><span>2</span><span>7</span><span>6</span>&nbsp;&nbsp;&#8800;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='Orange'>&#9608;</span><span class='OrangeToGray' text="&#9608;">&#9608;</span>&nbsp;&nbsp;<span class='Gray'>&#9608;</span><span class='Gray'>&#9608;</span>&nbsp;&nbsp;<span class='Gray'>&#9608;</span><span class='Gray'>&#9604;</span><span class='Gray'>&#9608;</span></div>
 		<div class='character'><span>　</span>　<span>　</span>　<span>　</span>　＝　<span>　</span>　<span>　</span>　<span>　</span></div>
-		<div class='pronunce'><span class='Orange'>&#9608;</span><span class='OrangeToGray'>&#9608;</span><span class='Gray'>&#9608;</span><span class='Gray'>&#9608;</span><span class='Gray'>&#9608;</span><span class='Gray'>&#9604;</span><span class='Gray'>&#9608;</span> = ? </div>
+		<div><br></div>
+		<div class='pronunce'><span class='Orange'>&#9608;</span><span class='OrangeToGray' text="&#9608;">&#9608;</span><span class='Gray'>&#9608;</span><span class='Gray'>&#9608;</span><span class='Gray'>&#9608;</span><span class='Gray'>&#9604;</span><span class='Gray'>&#9608;</span> = ? </div>
 
 </body>
 

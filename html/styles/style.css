@@ -12,6 +12,8 @@ html {
   	font-family: 'Klee One', sans-serif;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	background-image: url(../images/pattern_jigsaw.png);
+	background-size: cover;
   	/*background-color: #CBC6CC;*/
 }
 
@@ -20,14 +22,20 @@ html {
 	body {
 	  	width: 700px;
 	  	margin: 10px auto;
-	  	background-color: white;
+	  	/*background-color: white;*/
+	  	/*border: 5px solid black;*/
 	  	padding: 20px 20px 20px 20px;
-	  	border: 5px solid black;
-	}
-	html {
-		background-image: url(../images/pattern_jigsaw_pc.png);
-		background-size: cover;
-		background-repeat: no-repeat;
+		color: black;
+    	justify-content: center;
+    	align-items: center;
+    	gap: 20px;
+   		border-radius: 20px;
+    	backdrop-filter: blur(13px);
+    	background-color: rgba(255,255,255, 0.3);
+    	box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    	border: 5px rgba(255,255,255,0.4) solid;
+    	border-bottom: 5px rgba(40,40,40,0.35) solid;
+    	border-right: 5px rgba(40,40,40,0.35) solid;
 	}
 }
 @media screen and (max-width: 700px) {
@@ -35,14 +43,20 @@ html {
 	body {
 	  	width: 90%;
 	  	margin: 10px auto;
-	  	background-color: white;
+	  	/*background-color: white;*/
+	  	/*border: 5px solid black;*/
 	  	padding: 20px 20px 20px 20px;
-	  	border: 5px solid black;
-	}
-	html {
-		background-image: url(../images/pattern_jigsaw_phone.png);
-		background-size: cover;
-		background-repeat: no-repeat;
+		color: black;
+    	justify-content: center;
+    	align-items: center;
+    	gap: 20px;
+   		border-radius: 20px;
+    	backdrop-filter: blur(13px);
+    	background-color: rgba(255,255,255, 0.3);
+    	box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    	border: 5px rgba(255,255,255,0.4) solid;
+    	border-bottom: 5px rgba(40,40,40,0.35) solid;
+    	border-right: 5px rgba(40,40,40,0.35) solid;
 	}
 }
 div {
@@ -135,6 +149,7 @@ p {
   	font-size: 20px;
   	line-height: 2;
   	letter-spacing: 1px;
+	text-shadow: 0px 0px 1px black, 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 p.P1line, p.P2line, p.P3line, p.P4line, p.P5line, p.P6line {
 	display: none;
@@ -153,13 +168,15 @@ li {
   	line-height: 2;
   	letter-spacing: 1px;
 	counter-increment: li;
+	text-shadow: 0px 0px 1px black, 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 li::before {
 	content: counter(li) "/5";
 	color: #FE9952;
 	display: inline-block; 
 	width: 3em;
-  	text-shadow: 1px 1px 1px #CBC6CC;
+  	/*text-shadow: 1px 1px 1px #CBC6CC;*/
+	text-shadow: 0px 0px 1px black, 1px 1px 1px rgba(0, 0, 0, 0.5);
 	margin-left: -1em;
 	margin-right: 0.5em;
 	text-align: right;
@@ -170,11 +187,13 @@ span.OrangeToGray{
 	background-image: linear-gradient(to right, #FE9952, #CBC6CC);
 	-webkit-background-clip: text;
 	color: transparent;
+	text-shadow: none;
 }
-span.OrangeToGrayToOrange{
-	background-image: linear-gradient(to left, #FE9952, #CBC6CC, #FE9952);
-	-webkit-background-clip: text;
-	color: transparent;
+span.OrangeToGray::Before{
+	content: attr(text);
+	position: absolute;
+	text-shadow: 0 0 2px black;
+	z-index: -1;
 }
 span.Gray{
 	color: #CBC6CC;
@@ -197,6 +216,7 @@ button {
 	vertical-align: middle;
 	font-family: 'Zen Kurenaido';
 	font-size: 20px;
+	text-shadow: 0px 0px 1px black, 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 input {
@@ -266,4 +286,58 @@ _:lang(x)::-ms-, ruby > rt {
   zoom: 0.5;
 }
 
+/*firework https://codepen.io/xboxyan/pen/qBjWEPO*/
+.fireworks {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #FFEFAD;
+    padding-bottom: 100px;
+    -webkit-mask: url('https://imgservices-1252317822.image.myqcloud.com/image/081320210201435/e9951400.png') right top no-repeat;
+    -webkit-mask-size: auto 150px;
+    animation: fireworks 2s steps(24) infinite, random 8s steps(1) infinite, random_color 1s infinite;
+}
+@keyframes fireworks {
+    0% {
+        -webkit-mask-position: 0%;
+    }
+    50%,
+    100% {
+        -webkit-mask-position: 100% 100%;
+    }
+}
 
+@keyframes random {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(200%, 50%) scale(0.8);
+    }
+    50% {
+        transform: translate(80%, 80%) scale(1.2);
+    }
+    75% {
+        transform: translate(20%, 60%) scale(0.65);
+    }
+}
+@keyframes random_color {
+    0% {
+        background-color: #FFEFAD;
+    }
+    25% {
+        background-color: #ffadad;
+    }
+    50% {
+        background-color: #aeadff;
+    }
+    75% {
+        background-color: #adffd9;
+    }
+}
+@media screen and (prefers-reduced-motion) { 
+    /* 禁用不必要的动画 */ 
+    .fireworks { 
+        animation: none; 
+    } 
+}
