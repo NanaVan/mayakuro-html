@@ -194,19 +194,27 @@
 				<div class='center' id='d6'><input type='text' id='A61Input' class='A6' required minlength='2' maxlength='22' size='8' placeholder='漢字カナ'>&ensp;の&ensp;<input type='text' id='A62Input' class='A6' required minlength='2' maxlength='22' size='14' placeholder='回答を書いて'>&nbsp;&nbsp;<input type='text' id='A63Input' class='A6' required minlength='2' maxlength='22' size='8' placeholder='ください'></div>
 				<div class='center'><button onclick='A6Btn()' class='P6' id='A6Btn'>次へ</button></div>
 		</div>
+		
+		<!-mario>
+		<div id='mario' class='mario'>
+				<div class='center'><button class='mario' id='marioBtn' onclick='coinRing()'></button></div>
+				<audio class='mario' id='marioRing' src='./puzzles/smb_coin.wav' controls></audio>
+		</div>
 
 		<!- P7>
 		<div id='P7' class='P7'>
 				<hr class='hr-fade-content' data-content='🐣❤️🐒&nbsp;&nbsp;🎊&nbsp;&nbsp;🇫🇷❤️🦢'>
 				<h1>おめでとうございます！</h1>
-				<div class="fireworks" style="left: 15%; top: 5%;"></div>
-				<div class="fireworks" style="right: 30%; top: 13%; animation-delay: -0.4s;"></div>
-				<div class="fireworks" style="left: 5%; top: 23%; animation-delay: -1.7s;"></div>
-				<div class="fireworks" style="right: 45%; top: 8%; animation-delay: -3.1s;"></div>
 				<div class='center'><button onclick='A71Btn()'>プレゼント受け取り</button></div>
 				<div class='center'><button onclick='A72Btn()'><span id='view'>全文表示</span></button></div>
 		</div>
 
+		<!-mario2>
+		<div id='mario2' class='mario2'>
+				<div class='center'><span class='emoji' id='marioEmoji'>&nbsp;</span></div>
+				<div class='center'><button class='mario' id='marioBtn2' onclick='coinRing2()'></button></div>
+				<audio class='mario' id='marioRing2' src='./puzzles/smb_coin.wav' controls></audio>
+		</div>
 
   </body>
 </html>

@@ -111,15 +111,14 @@ function A6Btn() {
 		document.getElementById('Q61Blank').style.fontFamily = 'Black Rose';
 		document.getElementById('Q62Blank').style.fontFamily = 'Black Rose';
 		document.getElementById('Q63Blank').style.fontFamily = 'Black Rose';
-		document.getElementById('P7').style.display = 'block';
-		document.getElementById('P1').style.display = 'none';
-		document.getElementById('P2').style.display = 'none';
-		document.getElementById('P3').style.display = 'none';
-		document.getElementById('P4').style.display = 'none';
-		document.getElementById('P5').style.display = 'none';
-		document.getElementById('P6').style.display = 'none';
-		document.body.style.backgroundColor = "rgba(0,0,0, 0.3)";
-		document.body.style.color= 'white';
+		//document.getElementById('P7').style.display = 'block';
+		document.getElementById('P1').style.display = 'block';
+		document.getElementById('P2').style.display = 'block';
+		document.getElementById('P3').style.display = 'block';
+		document.getElementById('P4').style.display = 'block';
+		document.getElementById('P5').style.display = 'block';
+		document.getElementById('P6').style.display = 'block';
+		document.getElementById('mario').style.display = 'block';
 	}else{
 		document.getElementById('A61Input').value="";	
 		document.getElementById('A62Input').value="";	
@@ -130,6 +129,37 @@ function A6Btn() {
 		aniShake('d6');	
 	}
 }
+
+// change marioButton images
+var imgs = new Array(
+	"url(./images/png1.png)",
+	"url(./images/png2.png)",
+	"url(./images/png3.png)"
+)
+var marioNums = 0;
+setInterval("marioChange()", 150);
+function marioChange() {
+	document.getElementById('marioBtn').style.backgroundImage = imgs[marioNums];
+	document.getElementById('marioBtn2').style.backgroundImage = imgs[marioNums];
+	marioNums++;
+	if (marioNums==3) marioNums = 0;
+}
+function coinRing() {
+	document.getElementById('marioRing').play();
+	setTimeout("flashP7()", 100);
+}
+function flashP7() {
+	document.getElementById('P7').style.display = 'block';
+	document.getElementById('mario2').style.display = 'block';
+	document.getElementById('P1').style.display = 'none';
+	document.getElementById('P2').style.display = 'none';
+	document.getElementById('P3').style.display = 'none';
+	document.getElementById('P4').style.display = 'none';
+	document.getElementById('P5').style.display = 'none';
+	document.getElementById('P6').style.display = 'none';
+	document.getElementById('mario').style.display = 'none';
+}
+
 function A71Btn() {
 	window.open("https://docs.google.com/forms/d/e/1FAIpQLSdC3XCSKdpLHPVYK7FyfqLEgzEF1oaqdvaHABCx6vic2WRG1w/viewform");
 }
@@ -151,6 +181,20 @@ function A72Btn() {
 		document.getElementById('P5').style.display = 'none';
 		document.getElementById('P6').style.display = 'none';
 	}
+}
+function coinRing2() {
+	document.getElementById('marioRing2').play();
+	document.getElementById('marioEmoji').innerHTML = emojis[getRandomInt(5)];
+	setTimeout("marioEmoHidden()", 100);
+}
+var emojis = new Array (
+	"🐣","🐒","🎊","🇫🇷","🦢"
+)
+function getRandomInt(max) {
+	return Math.floor(Math.random()*max)
+}
+function marioEmoHidden() {
+	document.getElementById('marioEmoji').innerHTML = '&nbsp;';
 }
 
 // hint
