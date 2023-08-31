@@ -86,7 +86,7 @@ div.P2hint, div.P3hint {
 }
 div.center {
 	display: table;
-	margin: 10px auto;
+	margin: 0 auto;
 	text-align: center;
 }
 iframe {
