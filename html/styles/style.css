@@ -8,7 +8,7 @@
 }
 
 html {
-  	font-size: 20px;
+  	font-size: 40px;
   	font-family: 'Klee One', sans-serif;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
@@ -16,11 +16,11 @@ html {
 	background-size: cover;
 }
 
-@media screen and (min-width: 701px) {
-/*browser width >= 701px */
+@media screen and (min-width: 801px) {
+/*browser width >= 800px */
 	body {
-	  	width: 700px;
-	  	margin: 10px auto;
+	  	width: 800px;
+	  	margin: 20px auto;
 	  	padding: 20px 20px 20px 20px;
 		color: white;
     	justify-content: center;
@@ -35,8 +35,8 @@ html {
     	border-right: 5px rgba(40,40,40,0.35) solid;
 	}
 }
-@media screen and (max-width: 700px) {
-/*browser width <= 700px*/
+@media screen and (max-width: 800px) {
+/*browser width <= 1000px*/
 	body {
 	  	width: 90%;
 	  	margin: 10px auto;
@@ -96,21 +96,21 @@ iframe {
 
 h1 {
 	font-family: 'Kana B';
-  	font-size: 40px;
+  	font-size: 80px;
   	text-align: center;
   	margin: 0;
   	padding: 20px 0;
   	color: #FE9952;
-  	text-shadow: 2px 2px 1px black;
+  	text-shadow: 4px 4px 2px black;
 }
 h2 {
 	font-family: 'Kana B';
-  	font-size: 30px;
+  	font-size: 60px;
   	text-align: center;
   	margin: 0;
   	padding: 20px 0;
   	color: #FE9952;
-  	text-shadow: 2px 2px 1px black;
+  	text-shadow: 4px 4px 2px black;
 }
 .special {
 	font-family: 'Permanent Marker';
@@ -118,7 +118,7 @@ h2 {
 .hr-fade-content {
     color: #FE9952;
     border: 0;
-    font-size: 16px;
+    font-size: 40px;
     padding: 1em 0;
     position: relative;
 }
@@ -126,7 +126,7 @@ h2 {
     content: attr(data-content);
     position: absolute;
     padding: 0 1ch;
-    line-height: 4px;
+    line-height: 8px;
     border: solid #FE9952;
     border-width: 0 99vw;
     width: fit-content;
@@ -144,10 +144,10 @@ h2 {
 }
 
 p {
-  	font-size: 20px;
+  	font-size: 40px;
   	line-height: 2;
-  	letter-spacing: 1px;
-	text-shadow: 0px 0px 1px black, 1px 1px 1px rgba(0, 0, 0, 0.5);
+  	letter-spacing: 2px;
+	text-shadow: 0px 0px 2px black, 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 p.P1line, p.P2line, p.P3line, p.P4line, p.P5line, p.P6line {
 	display: none;
@@ -161,12 +161,12 @@ ol {
 	counter-reset: li;
 }
 li {
-  	font-size: 20px;
+  	font-size: 40px;
 	font-family: 'Zen Kurenaido';
   	line-height: 2;
   	letter-spacing: 1px;
 	counter-increment: li;
-	text-shadow: 0px 0px 1px black, 1px 1px 1px rgba(0, 0, 0, 0.5);
+	text-shadow: 0px 0px 2px black, 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 li::before {
 	content: counter(li) "/5";
@@ -174,7 +174,7 @@ li::before {
 	display: inline-block; 
 	width: 3em;
   	/*text-shadow: 1px 1px 1px #CBC6CC;*/
-	text-shadow: 0px 0px 1px black, 1px 1px 1px rgba(0, 0, 0, 0.5);
+	text-shadow: 0px 0px 2px black, 2px 2px 2px rgba(0, 0, 0, 0.5);
 	margin-left: -1em;
 	margin-right: 0.5em;
 	text-align: right;
@@ -216,24 +216,28 @@ button {
 	text-align: center;
 	vertical-align: middle;
 	font-family: 'Zen Kurenaido';
-	font-size: 20px;
-	text-shadow: 0px 0px 1px black, 1px 1px 1px rgba(0, 0, 0, 0.5);
-	box-shadow: 2px 2px black;
+	font-size: 40px;
+	text-shadow: 0px 0px 2px black, 2px 2px 2px rgba(0, 0, 0, 0.5);
+	box-shadow: 4px 4px black;
 }
 button::hover {
 	box-shadow: 0px 0px black;
 }
 button.mario {
 	border: 0;
-	width: 60px;
-	height: 60px;
+	width: 80px;
+	height: 80px;
 	background-size: 100%;
 	padding: 0;
 	cursor: pointer;
-	outline-offset: 10px;
+	outline-offset: 20px;
 }
 button.mario:active {
-	transform: translateY(-5px);
+	transform: translateY(-10px);
+}
+audio {
+	width: 600px;
+	font-size: 30px;
 }
 audio.mario {
 	display: none;
@@ -243,14 +247,14 @@ input {
 	text-align: center;
 	vertical-align: middle;
 	font-family: 'Zen Kurenaido';
-	font-size: 20px;
-	border: 2px solid #ccc;
-	border-radius: 2px;
+	font-size: 40px;
+	border: 4px solid #ccc;
+	border-radius: 4px;
 }
 input:focus {
 	outline: none;
 	border-color: #FE9952;
-	box-shadow: 0 0 10px #FE9952;
+	box-shadow: 0 0 20px #FE9952;
 }
 @keyframes shake{
 	0%{
