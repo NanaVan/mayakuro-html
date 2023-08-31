@@ -184,6 +184,7 @@ li::before {
 span.OrangeToGray{
 	background-image: linear-gradient(to right, #FE9952, #CBC6CC);
 	-webkit-background-clip: text;
+	position: relative;
 	color: transparent;
 	text-shadow: none;
 }

@@ -34,7 +34,7 @@
 		</div>
 		
 		<!- P1>
-		<iframe id='P1puzzle' class='P1puzzle' src='puzzles/puzzle-P1.html' scrolling='no' width='100%' height='400px' style='max-width: 100%; max-height: 100%;'></iframe>
+		<iframe id='P1puzzle' class='P1puzzle' src='puzzles/puzzle-P1.html' scrolling='no' width='100%' height='500px' style='max-width: 100%; max-height: 100%;'></iframe>
 		<div id='P1Btn' class='P1Btn'>
 				<div class='center'><button class='hint' onclick='A1hint()'><span id='P1hintSpan'>ヒント</span></button></div>
 				<div class='center' id='d1'><input type='text' id='A1Input' class='A1' required minlength='4' maxlength='20' size='12ch' placeholder='ひらがなで書いてください'></div>
@@ -44,7 +44,7 @@
 		<div id='P1' class='P1'>
 			<img class='P1line' src="images/P1-pic.png" alt="restaurant">
 			<p class='P1line'><span class='plain'>2019年5月、歌舞伎座の近くにある喫茶店で、天堂真矢と西條クロディーヌは、観劇した歌舞伎『</span><ruby><span>燈</span><rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby><span>台</span><rp>（</rp><rt>だい</rt><rp>）</rp></ruby><ruby><span>鬼</span><rp>（</rp><rt>き</rt><rp>）</rp></ruby><span class='plain'>』について、話し合っていました。</span></P>
-			<p class='P1line'><span class='plain'>天堂：</span><ruby><span>遣</span><rp>（</rp><rt>けん</rt><rp>）</rp></ruby><ruby><span>唐</span><rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby><span>使</span><rp>（</rp><rt>とう</rt><rp>）</rp></ruby><span class='plain'>が他郷で悪人に害され、姿を燈台鬼に変えられてしまった。知人に会えたけど故郷への帰れない。その苦しみや無念さ......こんな哀しくて無力な役、今まで演じたことがありませんね。</span></p>
+			<p class='P1line'><span class='plain'>天堂：</span><ruby><span>遣</span><rp>（</rp><rt>けん</rt><rp>）</rp></ruby><ruby><span>唐</span><rp>（</rp><rt>とう</rt><rp>）</rp></ruby><ruby><span>使</span><rp>（</rp><rt>し</rt><rp>）</rp></ruby><span class='plain'>が他郷で悪人に害され、姿を燈台鬼に変えられてしまった。知人に会えたけど故郷への帰れない。その苦しみや無念さ......こんな哀しくて無力な役、今まで演じたことがありませんね。</span></p>
 			<p class='P1line'>西條：役を演じるため先に似たような作品を読むよ。私だったら......</p>
 			<p class='P1line'><span class='plain'>天堂：そうですね、西條さんは小説を読むですか？私でしたら、</span><ruby><span>山</span><rp>（</rp><rt>やまの</rt><rp>）</rp></ruby><ruby><span>上</span><rp>（</rp><rt>うえの</rt><rp>）</rp></ruby><ruby><span>憶</span><rp>（</rp><rt>おく</rt><rp>）</rp></ruby><ruby><span>良</span><rp>（</rp><rt>ら</rt><rp>）</rp></ruby><span class='plain'>の和歌を読んでみます。遣唐使の経験がある人の和歌には、そういうモノがあると思いますね。</span></p>
 			<p class='P1line'><span class='plain'>西條：うん、例えば『</span><span class='Orange'>ま</span><span class='OrangeToGray' text="ん">ん</span><span class='Gray'>ようしゅう</span><span class='plain'>』の『</span><ruby><span>好</span><rp>（</rp><rt>かう</rt><rp>）</rp></ruby><ruby><span>去</span><rp>（</rp><rt>きよ</rt><rp>）</rp></ruby><ruby><span>好</span><rp>（</rp><rt>かう</rt><rp>）</rp></ruby><ruby><span>来</span><rp>（</rp><rt>らい</rt><rp>）</rp></ruby><span class='plain'>の歌』みたいに、唐に行く</span><ruby><span>多</span><rp>（</rp><rt>た</rt><rp>）</rp></ruby><ruby><span>治</span><rp>（</rp><rt>じ</rt><rp>）</rp></ruby><ruby><span>比</span><rp>（<rp><rt>ひの</rt><rp>）</rp></ruby><ruby><span>広</span><rp>（</rp><rt>ひろ</rt><rp>）</rp></ruby><ruby><span>成</span><rp>（</rp><rt>なり</rt><rp>）</rp></ruby><span class='plain'>に、日本人の誇りや使命を語り、無事に帰国することを祈るという願いを込めた歌だね。</span></p>
@@ -103,14 +103,13 @@
 			<p class='P3print'></p>
 			<p class='P3print'></p>
   		</div>
+		<div class='P3hint' id='P3hint'>
+				<div class='center'><audio  id='P3audio' src='puzzles/puzzle-P3.mp3' controls></audio></div>
+		</div>
 		<div id='P3Btn' class='P3Btn'>
 				<div class='center'><button class='hint' onclick='A3hint()'><span id='P3hintSpan'>ヒント</span></button></div>
 				<div class='center' id='d3'><input type='text' id='A31Input' class='A31' required minlength='4' maxlength='10' size='4ch' placeholder='カタカナ'>&ensp;&#8226;&ensp;<input type='text' id='A32Input' class='A32' required minlength='4' maxlength='20' size='8ch' placeholder='で書いてください'></div>
 				<div class='center'><button onclick='A3Btn()' class='P3' id='A3Btn'>次へ</button></div>
-		</div>
-		<div class='P3hint' id='P3hint'>
-				<br>
-				<div class='center'><audio  id='P3audio' src='puzzles/puzzle-P3.mp3' controls></audio></div>
 		</div>
 
 		<!- P4>
@@ -165,7 +164,7 @@
 				<div class='center' id='d5'><input type='text' id='A5Input' class='A5' required minlength='2' maxlength='22' size='12ch' placeholder='カタカナで書いてください'></div>
 				<div class='center'><button onclick='A5Btn()' class='P5' id='A5Btn'>次へ</button></div>
 		</div>
-		<iframe id='P5hint' class='P5hint' src='puzzles/puzzle-P5.html' width='100%' height='360px' style='max-width: 100%; max-height: 180vh; box-sizing: border-box;'></iframe>
+		<iframe id='P5hint' class='P5hint' src='puzzles/puzzle-P5.html' width='100%' height='480px' style='max-width: 100%; max-height: 180vh; box-sizing: border-box;'></iframe>
 
 		<!- P6>
 		<div id='P6' class='P6'>
@@ -173,9 +172,9 @@
 			<p class='P6line'>帰り道。二人は東京タワーが見える道を歩んでいる。</p>
 			<p class='P6line'>西條：ここからも見えるね。東京タワー。</p>
 			<p class='P6line'>天堂：前回来たのは桜が咲いていた時期です。時間が過ぎるのは早いですね。</p>
-			<p class='P6line'>西條：もう五月か...進路はもう決まったんだろ？</p>
+			<p class='P6line'>西條：もう五月か...進路はもう決まったんでしょう？</p>
 			<p class='P6line'>天堂：はい。新国立歌劇団に入ります。西條さんは？</p>
-			<p class='P6line'>西條：もちろん、世界の一番の女優になるんだ。</p>
+			<p class='P6line'>西條：もちろん、世界の一番の女優になるわよ。</p>
 			<p class='P6line'>天堂：東京タワーに向かって誓えます？</p>
 			<p class='P6line'>西條：誓いならエッフェル塔でしょう？</p>
 			<p class='P6line'><span class='plain'>天堂は微笑んで、輝いている西條の瞳を見つめていた。耳には馴染み深いメロディーが響いていた。それは彼女たち二人だけの曲、それは</span><span class='Orange'>&#9608;&#9608;&#9608;&#9608;</span><span class='Gray'>の</span><span class='Orange'>&#9608;&#9604;&#9608;&#9608;&#9608;&nbsp;&nbsp;&#9608;&#9608;</span><span class='plain'>。</span></p>
