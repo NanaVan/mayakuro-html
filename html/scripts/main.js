@@ -104,7 +104,7 @@ function A6Btn() {
 	if((document.getElementById('A61Input').value =='まやクロ' || document.getElementById('A61Input').value =='まやくろ' || document.getElementById('A61Input').value =='真矢クロ' || document.getElementById('A61Input').value =='真矢くろ' || document.getElementById('A61Input').value =='マヤクロ' || document.getElementById('A61Input').value =='マヤくろ'  ) && document.getElementById('A62Input').value =='ファンシー' && document.getElementById('A63Input').value =='ユー'){
 		document.getElementById('Q61Blank').innerHTML = '真矢クロ';
 		document.getElementById('Q62Blank').innerHTML = 'の';
-		document.getElementById('Q63Blank').innerHTML = 'ファンシー　ユー';
+		document.getElementById('Q63Blank').innerHTML = 'ファンシーユー';
 		document.getElementById('P6Btn').style.display = 'none';	
 		document.getElementById('P6hint').style.display = 'none';	
 		changeStyleShadow('Orange', true);

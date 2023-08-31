@@ -56,7 +56,7 @@ html {
 }
 div {
 	width: 100%;
-	margin: 0 auto;
+	margin: 10px auto;
 	background-color: transparent;
 }
 div.P0{
@@ -86,7 +86,7 @@ div.P2hint, div.P3hint {
 }
 div.center {
 	display: table;
-	margin: 0 auto;
+	margin: 8px auto;
 	text-align: center;
 }
 iframe {
@@ -191,6 +191,10 @@ span.OrangeToGray{
 span.OrangeToGray::Before{
 	content: attr(text);
 	position: absolute;
+	bottom: 10px;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	text-shadow: 0 0 2px black;
 	z-index: -1;
 }
