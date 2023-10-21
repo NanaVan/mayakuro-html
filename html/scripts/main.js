@@ -136,11 +136,17 @@ var imgs = new Array(
 	"url(./images/png2.png)",
 	"url(./images/png3.png)"
 )
+var img_grays  = new Array(
+	"url(./images/png1_gray.png)",
+	"url(./images/png2_gray.png)",
+	"url(./images/png3_gray.png)"
+)
 var marioNums = 0;
 setInterval("marioChange()", 150);
 function marioChange() {
 	document.getElementById('marioBtn').style.backgroundImage = imgs[marioNums];
 	document.getElementById('marioBtn2').style.backgroundImage = imgs[marioNums];
+	document.getElementById('marioBtn3').style.backgroundImage = img_grays[marioNums];
 	marioNums++;
 	if (marioNums==3) marioNums = 0;
 }
@@ -184,17 +190,28 @@ function A72Btn() {
 }
 function coinRing2() {
 	document.getElementById('marioRing2').play();
-	document.getElementById('marioEmoji').innerHTML = emojis[getRandomInt(5)];
-	setTimeout("marioEmoHidden()", 100);
+	document.getElementById('marioEmoji').innerHTML = emojis_5[getRandomInt(5)];
+	setTimeout("marioEmoHidden2()", 100);
 }
-var emojis = new Array (
+var emojis_5 = new Array (
 	"🐣","🐒","🎊","🇫🇷","🦢"
+)
+function coinRing3() {
+	document.getElementById('marioRing3').play();
+	document.getElementById('marioEmoji2').innerHTML = emojis_3[getRandomInt(3)];
+	setTimeout("marioEmoHidden3()", 100);
+}
+var emojis_3 = new Array (
+	"🐣","🐒","🎊"
 )
 function getRandomInt(max) {
 	return Math.floor(Math.random()*max)
 }
-function marioEmoHidden() {
+function marioEmoHidden2() {
 	document.getElementById('marioEmoji').innerHTML = '&nbsp;';
+}
+function marioEmoHidden3() {
+	document.getElementById('marioEmoji2').innerHTML = '&nbsp;';
 }
 
 // hint
@@ -257,6 +274,20 @@ function A6hint() {
 		changeStyleShadow('Orange', true);
 		document.getElementById('P6hint').style.display = 'none';
 	}
+}
+function A7hint() {
+	if (document.getElementById('P7hintSpan').innerHTML == 'ヒント' ) {
+		document.getElementById('P7hintSpan').innerHTML = '隠す';
+		document.getElementById('MayaKuro').style.color = '#CBC6CC';
+		document.getElementById('mario2').style.display = 'none';
+		document.getElementById('mario3').style.display = 'block';
+	} else{
+		document.getElementById('P7hintSpan').innerHTML = 'ヒント';
+		document.getElementById('MayaKuro').style.color = '#FE9952';
+		document.getElementById('mario2').style.display = 'block';
+		document.getElementById('mario3').style.display = 'none';
+	}
+
 }
 
 function changeStyleShadow(className, shadowStatus) {
